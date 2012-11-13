@@ -19,6 +19,7 @@ gem 'jquery-rails'
 
 group :development do
   gem 'pow'
+  gem 'powder'
   gem 'pry'
 end
 
