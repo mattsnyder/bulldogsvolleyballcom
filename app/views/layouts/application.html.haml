@@ -1,0 +1,367 @@
+!!!
+%html
+  %head
+    %title Stow Bulldogs Boys Volleyball
+    = csrf_meta_tags
+    %link{:href => "/assets/favicon.ico", :rel => "shortcut icon"}
+    / Apple iOS Settings
+    %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}    
+    %meta{:content => "default", :name => "apple-mobile-web-app-status-bar-style"}
+    %meta{:content => "width=device-width, minimum-scale=1, maximum-scale=1", :name => "viewport"}
+    %link{:href => "/assets/ios_icon.png", :rel => "apple-touch-icon-precomposed"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Bitter:400italic|Exo:400,800", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    = stylesheet_link_tag "application", :media => "all" 
+    = javascript_include_tag "application"      
+    /[if gte IE 9]
+      <style type="text/css">
+      \.button, .button:hover, .button.grey, .button.grey:hover {
+      filter: none;
+      }
+      </style>
+  %body
+    %section#wrap
+      %header
+        %section.shell
+          %h1#logo
+            %a{:href => "index.html"}
+              %img{:alt => "", :src => "/assets/logo.png"}/
+          %nav
+            %ul
+              %li.current
+                %a{:href => "index.html"} Home
+              %li
+                %a{:href => "page_styling.html"} Styles
+              %li
+                %a{:href => "trainers.html"}
+                  Trainers
+                  %span.arrow
+                %section.dropdown
+                  %ul
+                    %li
+                      %a{:href => "trainer.html"} Joey Smith
+                    %li
+                      %a{:href => "trainer.html"}
+                        Robert Galgoa
+                        %span.arrow
+                      %section.dropdown
+                        %ul
+                          %li
+                            %a{:href => "trainer.html"} Joey Smith
+                          %li
+                            %a{:href => "trainer.html"} Robert Galgoa
+                          %li
+                            %a{:href => "trainer.html"} Franklin Jr.
+                    %li
+                      %a{:href => "trainer.html"} Franklin Jr.
+                    %li
+                      %a{:href => "trainer.html"} Sarah Hemmer
+                    %li
+                      %a{:href => "trainer.html"} George Norman
+              %li
+                %a{:href => "calendar.html"} Calendar
+              %li
+                %a{:href => "news.html"} News
+              %li
+                %a{:href => "gallery.html"} Gallery
+              %li
+                %a{:href => "contact.php"} Contact
+              %li.phone (800) 456-7890
+          #mobile-nav
+            %ul
+              %li.current
+                %a{:href => "index.html"} Home
+              %li
+                %a{:href => "page_styling.html"} Styles
+              %li
+                %a{:href => "trainers.html"} Trainers
+                %ul
+                  %li
+                    %a{:href => "trainer.html"} Joey Smith
+                  %li
+                    %a{:href => "trainer.html"} Robert Galgoa
+                  %li
+                    %a{:href => "trainer.html"} Franklin Jr.
+                  %li
+                    %a{:href => "trainer.html"} Sarah Hemmer
+                  %li
+                    %a{:href => "trainer.html"} George Norman
+              %li
+                %a{:href => "calendar.html"} Calendar
+              %li
+                %a{:href => "news.html"} News
+              %li
+                %a{:href => "gallery.html"} Gallery
+              %li
+                %a{:href => "contact.php"} Contact
+              %li.phone (800) 456-7890
+            %a.mobile-nav-toggle +
+      %section#slider
+        %section.image-slider
+          %ul.slides
+            %li
+              = image_tag "handsblocking.jpg"
+            %li
+              = image_tag "volleyballssmaller.jpg"
+            %li
+              = image_tag "silhouette.jpg"
+        %section.text-slider
+          %ul
+            %li
+              %h2 HEALTH & FITNESS.
+              %h3 This is an awesome subhead
+              %p Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt ut labore et dolore magna aliqua incididunt consectetur adipisicing.
+              %a.button{:href => "#"}
+                Join Today -
+                %strong $5/Week
+            %li
+              %h2 ANOTHER SLIDE.
+              %h3 Another great subhead
+              %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua eiusmod.
+              %a.button{:href => "#"}
+                Join Today -
+                %strong $5/Week
+            %li
+              %h2 FINAL SLIDE.
+              %h3 The last subhead.
+              %p Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt ut labore et dolore magna aliqua incididunt consectetur adipisicing.
+              %a.button{:href => "#"}
+                Join Today -
+                %strong $5/Week
+        %section.elements
+          %span.white-box
+          %span.top-corner
+          %span.bottom-corner
+      %section#testimonials
+        %ul.slides
+          %li
+            %section.shell
+              %img{:alt => "", :src => "/assets/th-testimonial.jpg"}/
+              %h3 “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.”
+              %p
+                %strong — Samantha Jones,
+                %em Happy GymBoom Member
+          %li
+            %section.shell
+              %img{:alt => "", :src => "/assets/th-testimonial.jpg"}/
+              %h3 “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim. labore et dolore magna aliqua. Ut enim ad minim.”
+              %p
+                %strong — Samantha Jones,
+                %em Happy GymBoom Member
+          %li
+            %section.shell
+              = image_tag "th-testimonial.jpg"
+              %h3 “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.”
+              %p
+                %strong — Samantha Jones,
+                %em Happy GymBoom Member
+      %section#features
+        %section.shell
+          %section.one_half
+            %h2 WHY JOIN?
+            %h3 This is an awesome subhead
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur.
+            %a.button{:href => "#"}
+              Join Today -
+              %strong $5/Week
+            %a.button.grey{:href => "#"} Learn More
+          %section.one_half.last
+            %h2 ALREADY A MEMBER?
+            %h3 This is an awesome subhead
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur.
+            %a.button{:href => "#"} Sign In
+            %a.button.grey{:href => "#"} View Calendar
+      %section#bottom
+        %section.shell
+          %ul.widgets
+            %li.recent-widget.one_third
+              %h4 Recent News
+              %section.container
+                %ul.slides
+                  %li
+                    %h3
+                      %a{:href => "#"} This is the most recent news item
+                    %h6
+                      Posted by
+                      %strong GymBoom
+                      on
+                      %strong July 25th, 2012
+                    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    %a.continue{:href => "#"} CONTINUE READING
+                  %li
+                    %h3
+                      %a{:href => "#"} This is the most recent news item
+                    %h6
+                      Posted by
+                      %strong GymBoom
+                      on
+                      %strong July 25th, 2012
+                    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    %a.continue{:href => "#"} CONTINUE READING
+                  %li
+                    %h3
+                      %a{:href => "#"} This is the most recent news item
+                    %h6
+                      Posted by
+                      %strong GymBoom
+                      on
+                      %strong July 25th, 2012
+                    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    %a.continue{:href => "#"} CONTINUE READING
+                  %li
+                    %h3
+                      %a{:href => "#"} This is the most recent news item
+                    %h6
+                      Posted by
+                      %strong GymBoom
+                      on
+                      %strong July 25th, 2012
+                    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    %a.continue{:href => "#"} CONTINUE READING
+            %li.upcoming-widget.one_third
+              %h4 Class Schedule
+              %section.container
+                %ul.slides
+                  %li
+                    %a{:href => "#"}
+                      %span.icon
+                        %img{:alt => "", :src => "/assets/clock.png"}/
+                      %span.right 2pm - 3pm
+                      %strong Indoor Cycling
+                  %li
+                    %a{:href => "#"}
+                      %span.icon
+                        %img{:alt => "", :src => "/assets/clock.png"}/
+                      %span.right 3pm - 3:30pm
+                      %strong Cardio Fitness
+                  %li
+                    %a{:href => "#"}
+                      %span.icon
+                        %img{:alt => "", :src => "/assets/clock.png"}/
+                      %span.right 4pm - 6pm
+                      %strong Advanced Cardio
+                  %li
+                    %a{:href => "#"}
+                      %span.icon
+                        %img{:alt => "", :src => "/assets/clock.png"}/
+                      %span.right 7pm - 7:30pm
+                      %strong Intro to Yoga
+                  %li
+                    %a{:href => "#"}
+                      %span.icon
+                        %img{:alt => "", :src => "/assets/clock.png"}/
+                      %span.right 8pm - 11pm
+                      %strong Advanced Boxing
+                  %li
+                    %a{:href => "#"}
+                      %span.icon
+                        %img{:alt => "", :src => "/assets/clock.png"}/
+                      %span.right 7am - 8am
+                      %strong Advanced Cardio
+                  %li
+                    %a{:href => "#"}
+                      %span.icon
+                        %img{:alt => "", :src => "/assets/clock.png"}/
+                      %span.right 9:30am - 11am
+                      %strong Intro to Yoga
+                  %li
+                    %a{:href => "#"}
+                      %span.icon
+                        %img{:alt => "", :src => "/assets/clock.png"}/
+                      %span.right 2pm - 3pm
+                      %strong Indoor Cycling
+                  %li
+                    %a{:href => "#"}
+                      %span.icon
+                        %img{:alt => "", :src => "/assets/clock.png"}/
+                      %span.right 3pm - 3:30pm
+                      %strong Cardio Fitness
+                  %li
+                    %a{:href => "#"}
+                      %span.icon
+                        %img{:alt => "", :src => "/assets/clock.png"}/
+                      %span.right 4pm - 6pm
+                      %strong Advanced Cardio
+                  %li
+                    %a{:href => "#"}
+                      %span.icon
+                        %img{:alt => "", :src => "/assets/clock.png"}/
+                      %span.right 7pm - 7:30pm
+                      %strong Intro to Yoga
+                  %li
+                    %a{:href => "#"}
+                      %span.icon
+                        %img{:alt => "", :src => "/assets/clock.png"}/
+                      %span.right 8pm - 11pm
+                      %strong Advanced Boxing
+                  %li
+                    %a{:href => "#"}
+                      %span.icon
+                        %img{:alt => "", :src => "/assets/clock.png"}/
+                      %span.right 7am - 8am
+                      %strong Advanced Cardio
+                  %li
+                    %a{:href => "#"}
+                      %span.icon
+                        %img{:alt => "", :src => "/assets/clock.png"}/
+                      %span.right 9:30am - 11am
+                      %strong Intro to Yoga
+            %li#fitness.tweets-widget.one_third.last
+              %h4 Recent Tweets
+              %section.container
+      %section#footer-push
+    %footer
+      %section.top
+        %section.shell
+          %ul
+            %li.one_third
+              .map-widget
+                %iframe{:frameborder => "0", :height => "151", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=one+infinite+loop&aq=&sll=42.633959,28.88855&sspn=3.321876,7.13562&ie=UTF8&hq=&t=m&ll=37.352283,-122.027721&spn=0.020605,0.046692&z=13&output=embed", :width => "100%"}
+            %li.one_third
+              .contact-widget
+                %h4 VISIT / GET IN TOUCH
+                %ul
+                  %li
+                    %span.right +1 (800) 123-4567
+                    1234 Main Street
+                  %li
+                    %span.right +1 (123) 890-1234
+                    Cityname, ST 12345
+                  %li
+                    %a{:href => "mailto:info@gymboom.com"} info@gymboom.com
+                %ul.socials
+                  %li.facebook
+                    %a{:href => "#"} Facebook
+                  %li.twitter
+                    %a{:href => "#"} Twitter
+                  %li.linkedin
+                    %a{:href => "#"} LinkedIn
+                  %li.vimeo
+                    %a{:href => "#"} Vimeo
+                  %li.youtube
+                    %a{:href => "#"} YouTube
+                  %li.rss
+                    %a{:href => "#"} RSS
+            %li.one_third.last
+              .schedule-widget
+                %h4 Hours of Operation
+                %ul
+                  %li
+                    %span.right 8am - 11pm
+                    Monday - Friday
+                  %li
+                    %span.right 10am - 10pm
+                    Saturday
+                  %li
+                    %span.right Closed
+                    Sunday
+      %section.bottom
+        %section.shell
+          %p
+            %a#back-to-top.right{:href => "#wrap"} Back to Top
+            %a{:href => "#"} Privacy Policy
+    :javascript
+      window.jQuery || document.write('<\/script>')
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src='http://www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));

@@ -12,4 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require jquery.easing.1.3
+//= require jquery.carouFredSel-5.6.2
+//= require jquery.flexslider.min
+//= require jquery.tweet
+//= require jquery.fancybox.pack
+//= require jquery.func
+//= require modernizr

@@ -31,7 +31,7 @@ a,
 .recent-widget h3,
 .text-slider h2,
 #content h2,
-#content .gallery a:hover { color:#C25012; }
+#content .gallery a:hover { color:#970101; }
 
 header nav .dropdown li:hover,
 #bottom span.next:hover,
@@ -39,7 +39,7 @@ header nav .dropdown li:hover,
 #slider .flex-direction-nav a:hover,
 #testimonials .flex-direction-nav a:hover,
 #pagination a:hover,
-table.calendar thead th { border-color: #c25012; }
+table.calendar thead th { border-color: #970101; }
 
 header nav .dropdown li:hover,
 #slider .elements .top-corner,
@@ -49,13 +49,13 @@ header nav .dropdown li:hover,
 #filters span.active,
 #filters span.active:hover,
 header #mobile-nav .mobile-nav-toggle,
-header #mobile-nav li.current a { background: #c25012; }
+header #mobile-nav li.current a { background: #970101; }
 
 #bottom span.next:hover,
 #bottom span.prev:hover,
 #slider .flex-direction-nav a:hover,
 #testimonials .flex-direction-nav a:hover,
-table.calendar thead th a.cal-nav { background-color: #c25012; }
+table.calendar thead th a.cal-nav { background-color: #970101; }
 
 .button,
 table.calendar thead th {

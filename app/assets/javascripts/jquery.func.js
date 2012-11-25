@@ -19,7 +19,7 @@ $(function() {
 			easing: 'easeInOutQuint'
 		});
 		return false;
-	})
+	});
 
 	$('nav .dropdown').each(function() {
 		$(this).parents('li:eq(0)').addClass('has-dd');
@@ -196,7 +196,7 @@ $(function() {
 						queue: false
 					});
 				}
-			})
+			});
 		}
 
 		if($('#testimonials').length) {

@@ -130,7 +130,7 @@
 	footer .bottom { height:auto; }
 	footer .bottom p { font-size:12px; }
 	
-	#slider { background: #f2f2f2 url(images/loading.gif) center 330px no-repeat; }
+	#slider { background: #f2f2f2 url(/assets/loading.gif) center 330px no-repeat; }
 	#slider .image-slider li { -webkit-background-size: auto 230px;	-moz-background-size: auto 230px; -o-background-size: auto 230px; background-size: auto 230px; }
 	#slider .elements { margin:0; background:none; position:relative; left:0; top:0; right:auto; }
 	#slider .elements .white-box,
@@ -189,7 +189,7 @@
 	#content .gallery { width:100%; }
 	#content .gallery .item { float:none; margin:0 0 5%; display:block; width:100%; }
 	
-	#slider { background: #f2f2f2 url(images/loading.gif) center 300px no-repeat; }
+	#slider { background: #f2f2f2 url(/assets/loading.gif) center 300px no-repeat; }
 	#slider .image-slider  li { -webkit-background-size: auto 180px; -moz-background-size: auto 180px; -o-background-size: auto 180px; background-size: auto 180px; }
 	#slider .flex-direction-nav { top: 135px; }
 	#slider .text-slider { top:180px; }
