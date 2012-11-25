@@ -1,0 +1,24 @@
+= form_for(resource, :url => (resource.new_record? ? collection_url : resource_url(resource)), :html => { :method => (resource.new_record? ? "post" : "put") }) do |f|
+
+  %table    
+    - if resource.errors.any?
+      %tr
+        %td{:colspan => "2"}
+          %h2
+            = pluralize(resource.errors.count, "error")
+            prohibited this #{resource.class.to_s.titleize} from being saved:
+          %ul
+            - resource.errors.full_messages.each do |msg|
+              %li= msg
+    - resource.class.fields.each do |field|
+      - name = field.first
+      - next if ['id', 'created_at', 'updated_at', '_id', '_type'].include?(name)
+      %tr
+        %td= name.titleize
+        - if field[1].type.to_s == "Boolean" then
+          %td=f.check_box name.to_sym, {}, true, false
+        - else
+          %td= f.text_field name.to_sym, :class => 'inputbox'
+    %tr
+      %td{:colspan => "2"}
+        = f.submit :class => 'btn'

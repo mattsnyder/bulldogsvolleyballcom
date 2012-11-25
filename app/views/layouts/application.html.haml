@@ -30,146 +30,29 @@
               %li.current
                 %a{:href => "index.html"} Home
               %li
-                %a{:href => "page_styling.html"} Styles
-              %li
-                %a{:href => "trainers.html"}
-                  Trainers
-                  %span.arrow
-                %section.dropdown
-                  %ul
-                    %li
-                      %a{:href => "trainer.html"} Joey Smith
-                    %li
-                      %a{:href => "trainer.html"}
-                        Robert Galgoa
-                        %span.arrow
-                      %section.dropdown
-                        %ul
-                          %li
-                            %a{:href => "trainer.html"} Joey Smith
-                          %li
-                            %a{:href => "trainer.html"} Robert Galgoa
-                          %li
-                            %a{:href => "trainer.html"} Franklin Jr.
-                    %li
-                      %a{:href => "trainer.html"} Franklin Jr.
-                    %li
-                      %a{:href => "trainer.html"} Sarah Hemmer
-                    %li
-                      %a{:href => "trainer.html"} George Norman
-              %li
                 %a{:href => "calendar.html"} Calendar
               %li
                 %a{:href => "news.html"} News
               %li
-                %a{:href => "gallery.html"} Gallery
+                %a{:href => "super_scrimmage.html"} Super Scrimmage
               %li
-                %a{:href => "contact.php"} Contact
-              %li.phone (800) 456-7890
+                %a{:href => "gallery.html"} Gallery
+              %li.phone @bulldogsvolleyball
           #mobile-nav
             %ul
               %li.current
                 %a{:href => "index.html"} Home
               %li
-                %a{:href => "page_styling.html"} Styles
-              %li
-                %a{:href => "trainers.html"} Trainers
-                %ul
-                  %li
-                    %a{:href => "trainer.html"} Joey Smith
-                  %li
-                    %a{:href => "trainer.html"} Robert Galgoa
-                  %li
-                    %a{:href => "trainer.html"} Franklin Jr.
-                  %li
-                    %a{:href => "trainer.html"} Sarah Hemmer
-                  %li
-                    %a{:href => "trainer.html"} George Norman
-              %li
                 %a{:href => "calendar.html"} Calendar
               %li
                 %a{:href => "news.html"} News
               %li
-                %a{:href => "gallery.html"} Gallery
+                %a{:href => "super_scrimmage.html"} Super Scrimmage
               %li
-                %a{:href => "contact.php"} Contact
-              %li.phone (800) 456-7890
+                %a{:href => "gallery.html"} Gallery
+              %li.phone @bulldogsvolleyball
             %a.mobile-nav-toggle +
-      %section#slider
-        %section.image-slider
-          %ul.slides
-            %li
-              = image_tag "handsblocking.jpg"
-            %li
-              = image_tag "volleyballssmaller.jpg"
-            %li
-              = image_tag "silhouette.jpg"
-        %section.text-slider
-          %ul
-            %li
-              %h2 HEALTH & FITNESS.
-              %h3 This is an awesome subhead
-              %p Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt ut labore et dolore magna aliqua incididunt consectetur adipisicing.
-              %a.button{:href => "#"}
-                Join Today -
-                %strong $5/Week
-            %li
-              %h2 ANOTHER SLIDE.
-              %h3 Another great subhead
-              %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua eiusmod.
-              %a.button{:href => "#"}
-                Join Today -
-                %strong $5/Week
-            %li
-              %h2 FINAL SLIDE.
-              %h3 The last subhead.
-              %p Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt ut labore et dolore magna aliqua incididunt consectetur adipisicing.
-              %a.button{:href => "#"}
-                Join Today -
-                %strong $5/Week
-        %section.elements
-          %span.white-box
-          %span.top-corner
-          %span.bottom-corner
-      %section#testimonials
-        %ul.slides
-          %li
-            %section.shell
-              %img{:alt => "", :src => "/assets/th-testimonial.jpg"}/
-              %h3 “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.”
-              %p
-                %strong — Samantha Jones,
-                %em Happy GymBoom Member
-          %li
-            %section.shell
-              %img{:alt => "", :src => "/assets/th-testimonial.jpg"}/
-              %h3 “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim. labore et dolore magna aliqua. Ut enim ad minim.”
-              %p
-                %strong — Samantha Jones,
-                %em Happy GymBoom Member
-          %li
-            %section.shell
-              = image_tag "th-testimonial.jpg"
-              %h3 “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.”
-              %p
-                %strong — Samantha Jones,
-                %em Happy GymBoom Member
-      %section#features
-        %section.shell
-          %section.one_half
-            %h2 WHY JOIN?
-            %h3 This is an awesome subhead
-            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur.
-            %a.button{:href => "#"}
-              Join Today -
-              %strong $5/Week
-            %a.button.grey{:href => "#"} Learn More
-          %section.one_half.last
-            %h2 ALREADY A MEMBER?
-            %h3 This is an awesome subhead
-            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur.
-            %a.button{:href => "#"} Sign In
-            %a.button.grey{:href => "#"} View Calendar
+      = yield
       %section#bottom
         %section.shell
           %ul.widgets

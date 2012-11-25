@@ -1,0 +1,18 @@
+= link_to "New #{controller.controller_name.titleize.singularize}", url_for(:controller => controller.controller_name, :action => 'new')
+
+- if collection.any?
+  %table{:width => "100%"}
+    %thead
+      %tr
+        - collection.first.class.fields.each do |mongo_field|
+          - field = mongo_field.first
+          - next if ['_id', 'id', 'created_at', 'updated_at'].include?(field)
+          %th= field.titleize
+    %tbody
+      - collection.each do |r|
+        %tr{:class => "#{cycle('','alt ')}", :url => edit_resource_url(r)}
+          - r.class.fields.each do |mongo_field|
+            - field = mongo_field.first
+            - next if ['_id', 'id', 'created_at', 'updated_at'].include?(field)
+          %td= r.send(field)
+  

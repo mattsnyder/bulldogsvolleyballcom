@@ -1,1 +1,60 @@
- 
+%section#slider
+  %section.image-slider
+    %ul.slides
+      %li
+        = image_tag "handsblocking.jpg"
+      %li
+        = image_tag "volleyballssmaller.jpg"
+      %li
+        = image_tag "silhouette.jpg"
+  %section.text-slider
+    %ul
+      - announcements.each do |a|
+        %li
+          %h2= a.headline.upcase
+          %h3= a.subhead
+          %p= a.message
+
+  %section.elements
+    %span.white-box
+    %span.top-corner
+    %span.bottom-corner
+%section#testimonials
+  %ul.slides
+    %li
+      %section.shell
+        %img{:alt => "", :src => "/assets/th-testimonial.jpg"}/
+        %h3 “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.”
+        %p
+          %strong — Samantha Jones,
+          %em Happy GymBoom Member
+    %li
+      %section.shell
+        %img{:alt => "", :src => "/assets/th-testimonial.jpg"}/
+        %h3 “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim. labore et dolore magna aliqua. Ut enim ad minim.”
+        %p
+          %strong — Samantha Jones,
+          %em Happy GymBoom Member
+    %li
+      %section.shell
+        = image_tag "th-testimonial.jpg"
+        %h3 “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.”
+        %p
+          %strong — Samantha Jones,
+          %em Happy GymBoom Member
+%section#features
+  %section.shell
+    %section.one_half
+      %h2 WHY JOIN?
+      %h3 This is an awesome subhead
+      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur.
+      %a.button{:href => "#"}
+        Join Today -
+        %strong $5/Week
+      %a.button.grey{:href => "#"} Learn More
+    %section.one_half.last
+      %h2 ALREADY A MEMBER?
+      %h3 This is an awesome subhead
+      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur.
+      %a.button{:href => "#"} Sign In
+      %a.button.grey{:href => "#"} View Calendar 
