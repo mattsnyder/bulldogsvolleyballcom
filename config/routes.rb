@@ -1,10 +1,12 @@
 Bulldogsvolleyballcom::Application.routes.draw do
   namespace :admin do
     resources :announcements
+    resources :events
     resources :stories
   end
 
   match 'news/:id' => 'story#show', :as => :story
+  match 'calendar/:id' => 'calendar#show', :as => :event
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

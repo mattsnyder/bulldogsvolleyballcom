@@ -1,5 +1,5 @@
 class HomepageController < ApplicationController
-  helper_method :announcements, :recent_news
+  helper_method :announcements, :recent_news, :schedule
 
   def index
   end
@@ -10,6 +10,10 @@ class HomepageController < ApplicationController
 
   def recent_news
     Story.all
+  end
+
+  def schedule
+    Event.all
   end
 
 end
