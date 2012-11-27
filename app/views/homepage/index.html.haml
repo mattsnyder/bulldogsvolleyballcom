@@ -19,42 +19,114 @@
     %span.white-box
     %span.top-corner
     %span.bottom-corner
-%section#testimonials
-  %ul.slides
-    %li
-      %section.shell
-        %img{:alt => "", :src => "/assets/th-testimonial.jpg"}/
-        %h3 “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.”
-        %p
-          %strong — Samantha Jones,
-          %em Happy GymBoom Member
-    %li
-      %section.shell
-        %img{:alt => "", :src => "/assets/th-testimonial.jpg"}/
-        %h3 “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim. labore et dolore magna aliqua. Ut enim ad minim.”
-        %p
-          %strong — Samantha Jones,
-          %em Happy GymBoom Member
-    %li
-      %section.shell
-        = image_tag "th-testimonial.jpg"
-        %h3 “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.”
-        %p
-          %strong — Samantha Jones,
-          %em Happy GymBoom Member
-%section#features
+
+%section#bottom
   %section.shell
-    %section.one_half
-      %h2 WHY JOIN?
-      %h3 This is an awesome subhead
-      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur.
-      %a.button{:href => "#"}
-        Join Today -
-        %strong $5/Week
-      %a.button.grey{:href => "#"} Learn More
-    %section.one_half.last
-      %h2 ALREADY A MEMBER?
-      %h3 This is an awesome subhead
-      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur.
-      %a.button{:href => "#"} Sign In
-      %a.button.grey{:href => "#"} View Calendar 
+    %ul.widgets
+      %li.recent-widget.one_third
+        %h4 Recent News
+        %section.container
+          %ul.slides
+            - recent_news.each do |story|
+              %li
+                %h3
+                  = link_to story.headline, story_url(story)
+                %h6
+                  Posted by
+                  %strong= story.author
+                  on
+                  %strong= story.publication_date.to_s(:pubtime)
+                %p= story.teaser
+                = link_to "CONTINUE READING", story_url(story)
+
+      %li.upcoming-widget.one_third
+        %h4 Schedule
+        %section.container
+          %ul.slides
+            %li
+              %a{:href => "#"}
+                %span.icon
+                  %img{:alt => "", :src => "/assets/clock.png"}/
+                %span.right 2pm - 3pm
+                %strong Indoor Cycling
+            %li
+              %a{:href => "#"}
+                %span.icon
+                  %img{:alt => "", :src => "/assets/clock.png"}/
+                %span.right 3pm - 3:30pm
+                %strong Cardio Fitness
+            %li
+              %a{:href => "#"}
+                %span.icon
+                  %img{:alt => "", :src => "/assets/clock.png"}/
+                %span.right 4pm - 6pm
+                %strong Advanced Cardio
+            %li
+              %a{:href => "#"}
+                %span.icon
+                  %img{:alt => "", :src => "/assets/clock.png"}/
+                %span.right 7pm - 7:30pm
+                %strong Intro to Yoga
+            %li
+              %a{:href => "#"}
+                %span.icon
+                  %img{:alt => "", :src => "/assets/clock.png"}/
+                %span.right 8pm - 11pm
+                %strong Advanced Boxing
+            %li
+              %a{:href => "#"}
+                %span.icon
+                  %img{:alt => "", :src => "/assets/clock.png"}/
+                %span.right 7am - 8am
+                %strong Advanced Cardio
+            %li
+              %a{:href => "#"}
+                %span.icon
+                  %img{:alt => "", :src => "/assets/clock.png"}/
+                %span.right 9:30am - 11am
+                %strong Intro to Yoga
+            %li
+              %a{:href => "#"}
+                %span.icon
+                  %img{:alt => "", :src => "/assets/clock.png"}/
+                %span.right 2pm - 3pm
+                %strong Indoor Cycling
+            %li
+              %a{:href => "#"}
+                %span.icon
+                  %img{:alt => "", :src => "/assets/clock.png"}/
+                %span.right 3pm - 3:30pm
+                %strong Cardio Fitness
+            %li
+              %a{:href => "#"}
+                %span.icon
+                  %img{:alt => "", :src => "/assets/clock.png"}/
+                %span.right 4pm - 6pm
+                %strong Advanced Cardio
+            %li
+              %a{:href => "#"}
+                %span.icon
+                  %img{:alt => "", :src => "/assets/clock.png"}/
+                %span.right 7pm - 7:30pm
+                %strong Intro to Yoga
+            %li
+              %a{:href => "#"}
+                %span.icon
+                  %img{:alt => "", :src => "/assets/clock.png"}/
+                %span.right 8pm - 11pm
+                %strong Advanced Boxing
+            %li
+              %a{:href => "#"}
+                %span.icon
+                  %img{:alt => "", :src => "/assets/clock.png"}/
+                %span.right 7am - 8am
+                %strong Advanced Cardio
+            %li
+              %a{:href => "#"}
+                %span.icon
+                  %img{:alt => "", :src => "/assets/clock.png"}/
+                %span.right 9:30am - 11am
+                %strong Intro to Yoga
+      %li#bulldogsvolleyball.tweets-widget.one_third.last
+        %h4 Recent Tweets
+        %section.container
