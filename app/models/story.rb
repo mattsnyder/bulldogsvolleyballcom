@@ -8,4 +8,5 @@ class Story
   field :publication_date, :type => DateTime
   field :teaser,           :type => String
 
+  
 end

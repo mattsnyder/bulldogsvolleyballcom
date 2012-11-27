@@ -5,7 +5,8 @@ Bulldogsvolleyballcom::Application.routes.draw do
     resources :stories
   end
 
-  match 'news/:id' => 'story#show', :as => :story
+  match 'news/:id' => 'news#show', :as => :story
+  match 'news' => 'news#index', :as => :news
   match 'calendar/:id' => 'calendar#show', :as => :event
 
   # The priority is based upon order of creation:

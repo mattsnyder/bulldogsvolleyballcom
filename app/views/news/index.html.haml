@@ -1,0 +1,28 @@
+%section.top-image{:style => "background:url('assets/top-image2.jpg') no-repeat top center;"}
+  %h1 Recent News
+%section#bottom
+  %section.shell
+    %section#content.news-feed.two-third
+      - news.each do |story|
+        %div.one_fourth
+          = image_tag "assets/trainer1.jpg", :width => "100%"
+        %div.three_fourth.last
+          %h4.title
+            = link_to story.headline, story_url(story)
+          %div.post-meta
+            Posted by 
+            %strong= story.author
+            on 
+            %strong= story.publication_date.to_s(:pubtime)
+          %p= story.body 
+          %p
+            = link_to "Read More", "#", :class => "continue"
+        %div.cl
+
+    %div#pagination
+      .current 1
+      = link_to "2", "#"
+      = link_to "3", "#"
+      = link_to "4", "#"
+      = link_to "5", "#"
+
