@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
-  helper_method :news
-  
+  helper_method :news, :events
+
   def show
   end
 
@@ -9,5 +9,9 @@ class NewsController < ApplicationController
 
   def news
     Story.all
+  end
+
+  def events
+    Event.all
   end
 end

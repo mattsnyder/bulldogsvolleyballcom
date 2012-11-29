@@ -1,28 +1,43 @@
-%section.top-image{:style => "background:url('assets/top-image2.jpg') no-repeat top center;"}
+%section.top-image{:style => "background:url('assets/volleyballssmaller.jpg') no-repeat top center;"}
   %h1 Recent News
+
 %section#bottom
   %section.shell
-    %section#content.news-feed.two-third
+    %section#content.news-feed.two_third
       - news.each do |story|
-        %div.one_fourth
-          = image_tag "assets/trainer1.jpg", :width => "100%"
-        %div.three_fourth.last
+        .one_fourth
+          %img{:src => "css/images/trainer1.jpg", :width => "100%"}/
+        .three_fourth.last
           %h4.title
             = link_to story.headline, story_url(story)
-          %div.post-meta
-            Posted by 
-            %strong= story.author
-            on 
-            %strong= story.publication_date.to_s(:pubtime)
-          %p= story.body 
+          .post-meta
+            Posted by
+            %strong
+              %a{:href => "trainer.html"}= story.author
+            on
+            = succeed "." do
+              %strong= story.publication_date.to_s(:pubtime)
+          %p= story.body
           %p
-            = link_to "Read More", "#", :class => "continue"
-        %div.cl
-
-    %div#pagination
-      .current 1
-      = link_to "2", "#"
-      = link_to "3", "#"
-      = link_to "4", "#"
-      = link_to "5", "#"
-
+            = link_to "Read More", story_url(story), :class => "continue"
+        .cl
+ 
+      #pagination
+        %span.current 1
+        %a{:href => "#"} 2
+        %a{:href => "#"} 3
+        %a{:href => "#"} 4
+        %a{:href => "#"} 5
+    %aside.one_third.last
+      %ul.widgets
+        %li.upcoming-widget
+          %h4 Upcoming Events
+          %section.container
+            %ul.slides
+              - events.each do |event|
+                %li
+                  %a{:href => "#"}
+                    %span.icon
+                      = image_tag "clock.png"
+                    %span.right= event.time
+                    %strong= event.title
