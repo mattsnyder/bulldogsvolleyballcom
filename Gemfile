@@ -3,7 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.9'
 gem 'mongoid'
 gem 'inherited_resources'
-gem 'thin'
+gem 'heroku'
+gem 'unicorn'
 
 # Gems used only for assets and not required
 # in production environments by default.

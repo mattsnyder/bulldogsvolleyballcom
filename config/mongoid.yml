@@ -1,34 +1,22 @@
-defaults: &defaults
-  host: localhost
-  port: 27017
-  # slaves:
-  #   - host: slave1.local
-  #     port: 27018
-  #   - host: slave2.local
-  #     port: 27019
-
 development:
-  <<: *defaults
-  database: bulldogsvolleyballcom_development
+  # Configure available database sessions. (required)
+  sessions:
+    # Defines the default session. (required)
+    default:
+      # Defines the name of the default database that Mongoid can connect to.
+      # (required).
+      database: bulldogsvolleyballcom_dev
+      # Provides the hosts the default session can connect to. Must be an array
+      # of host:port pairs. (required)
+      hosts:
+        - localhost:27017
 
-test:
-  <<: *defaults
-  database: bulldogsvolleyballcom_test
-
-# set these environment variables on your prod server
-production:
-  # <<: *defaults
-  # database: bulldogsvolleyballcom_prod
-
-  # other settings for production
-  # host: <%= ENV['MONGOID_HOST'] %>
-  # port: <%= ENV['MONGOID_PORT'] %>
-  # username: <%= ENV['MONGOID_USERNAME'] %>
-  # password: <%= ENV['MONGOID_PASSWORD'] %>
-  # database: <%= ENV['MONGOID_DATABASE'] %>
-
-  # heroku
-  uri: <%= ENV['MONGOHQ_URL'] %>
-
-  # bushido (mongohq_url will also work)
-  # uri: <%= ENV['MONGODB_URL'] %>
+<% if ENV['MONGOHQ_URL'] %>
+  production:
+    sessions:
+      default:
+        uri: <%= ENV['MONGOHQ_URL'] %>
+        options:
+          skip_version_check: true
+          safe: true
+<% end %>
