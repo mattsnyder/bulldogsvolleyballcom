@@ -1,5 +1,14 @@
 Bulldogsvolleyballcom::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => 25,
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => ENV['SENDGRID_DOMAIN']
+  }
 
   # Code is not reloaded between requests
   config.cache_classes = true
