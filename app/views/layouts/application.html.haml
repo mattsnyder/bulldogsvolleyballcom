@@ -11,7 +11,9 @@
     %link{:href => "/assets/ios_icon.png", :rel => "apple-touch-icon-precomposed"}
     %link{:href => "http://fonts.googleapis.com/css?family=Bitter:400italic|Exo:400,800", :media => "all", :rel => "stylesheet", :type => "text/css"}/
     = stylesheet_link_tag "application", :media => "all" 
+    = stylesheet_link_tag "aloha/csss/aloha.css"
     = javascript_include_tag "application"      
+    <script src="/assets/aloha/aloha.js" data-aloha-plugins="common/ui,common/format,common/highlighteditables,common/link"></script>
     /[if gte IE 9]
       <style type="text/css">
       \.button, .button:hover, .button.grey, .button.grey:hover {

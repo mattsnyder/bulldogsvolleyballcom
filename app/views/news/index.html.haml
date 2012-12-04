@@ -8,8 +8,7 @@
         .one_fourth
           %img{:src => "css/images/trainer1.jpg", :width => "100%"}/
         .three_fourth.last
-          %h4.title
-            = link_to story.headline, story_url(story)
+          %h4.title.aloha.editable-short-text= story.headline
           .post-meta
             Posted by
             %strong
@@ -41,3 +40,8 @@
                       = image_tag "clock.png"
                     %span.right= event.time
                     %strong= event.title
+
+:javascript
+  Aloha.ready( function() {
+    Aloha.jQuery('#content').aloha();
+  });

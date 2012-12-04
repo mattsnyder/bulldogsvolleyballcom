@@ -19,3 +19,6 @@
 //= require jquery.fancybox.pack
 //= require jquery.func
 //= require modernizr
+//= require aloha/require
+
+

@@ -15,4 +15,5 @@
  *= require style
  *= require responsive
  *= require customize
+ *= require aloha/aloha
  */
