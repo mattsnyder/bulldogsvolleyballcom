@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
 gem 'mongoid'
+gem 'bson_ext'
 gem 'inherited_resources'
-gem 'heroku'
 gem 'unicorn'
 
 # Gems used only for assets and not required
