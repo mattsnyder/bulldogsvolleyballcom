@@ -32,28 +32,24 @@
           %nav
             %ul
               %li.current
-                %a{:href => "index.html"} Home
+                %a{:href => root_url} Home
               %li
-                %a{:href => "calendar.html"} Calendar
+                %a{:href => events_url} Calendar
               %li
-                %a{:href => "news.html"} News
+                %a{:href => "#"} News
               %li
-                %a{:href => "super_scrimmage.html"} Super Scrimmage
-              %li
-                %a{:href => "gallery.html"} Gallery
+                %a{:href => "#"} Super Scrimmage
               %li.phone @bulldogsvolleyball
           #mobile-nav
             %ul
               %li.current
-                %a{:href => "index.html"} Home
+                %a{:href => root_url} Home
               %li
-                %a{:href => "calendar.html"} Calendar
+                %a{:href => events_url} Calendar
               %li
-                %a{:href => "news.html"} News
+                %a{:href => "#"} News
               %li
-                %a{:href => "super_scrimmage.html"} Super Scrimmage
-              %li
-                %a{:href => "gallery.html"} Gallery
+                %a{:href => "#"} Super Scrimmage
               %li.phone @bulldogsvolleyball
             %a.mobile-nav-toggle +
       = yield
@@ -65,24 +61,24 @@
           %ul
             %li.one_third
               .map-widget
-                %iframe{:frameborder => "0", :height => "151", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=one+infinite+loop&aq=&sll=42.633959,28.88855&sspn=3.321876,7.13562&ie=UTF8&hq=&t=m&ll=37.352283,-122.027721&spn=0.020605,0.046692&z=13&output=embed", :width => "100%"}
+                %iframe{:frameborder => "0", :height => "151", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=one+infinite+loop&aq=&spn=0.006295,0.006295&ie=UTF8&hq=&t=m&ll=41.168409,-81.39711&spn=0.006295,0.006295&z=13&output=embed", :width => "100%"}
             %li.one_third
               .contact-widget
                 %h4 VISIT / GET IN TOUCH
                 %ul
                   %li
-                    %span.right +1 (800) 123-4567
-                    1234 Main Street
+                    %span.right +1 (330) 689-5300
+                    3227 Graham Road
                   %li
-                    %span.right +1 (123) 890-1234
-                    Cityname, ST 12345
+                    %span.right +1 (330) 689-5204
+                    Stow, OH 44224
                   %li
-                    %a{:href => "mailto:info@gymboom.com"} info@gymboom.com
+                    %a{:href => "http://twitter.com/bulldogsvolleyball"} @bulldogsvolleyball
                 %ul.socials
                   %li.facebook
                     %a{:href => "#"} Facebook
                   %li.twitter
-                    %a{:href => "#"} Twitter
+                    %a{:href => "http://twitter.com/bulldogsvolleyball"} Twitter
                   %li.linkedin
                     %a{:href => "#"} LinkedIn
                   %li.vimeo

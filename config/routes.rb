@@ -8,6 +8,8 @@ Bulldogsvolleyballcom::Application.routes.draw do
   match 'news/:id' => 'news#show', :as => :story
   match 'news' => 'news#index', :as => :news
   match 'calendar/:id' => 'calendar#show', :as => :event
+  match 'calendar' => 'calendar#index', :as => :events
+  match 'calendar/:year/:month' => 'calendar#index', :as => :month
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
