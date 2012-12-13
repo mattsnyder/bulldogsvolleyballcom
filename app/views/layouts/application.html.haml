@@ -27,29 +27,25 @@
       %header
         %section.shell
           %h1#logo
-            %a{:href => "index.html"}
+            %a{:href => root_url}
               = image_tag "bulldoglogo.png"
           %nav
             %ul
-              %li.current
+              %li
                 %a{:href => root_url} Home
               %li
                 %a{:href => events_url} Calendar
               %li
-                %a{:href => "#"} News
-              %li
-                %a{:href => "#"} Super Scrimmage
+                %a{:href => news_url} News
               %li.phone @bulldogsvolleyball
           #mobile-nav
             %ul
-              %li.current
+              %li
                 %a{:href => root_url} Home
               %li
                 %a{:href => events_url} Calendar
               %li
-                %a{:href => "#"} News
-              %li
-                %a{:href => "#"} Super Scrimmage
+                %a{:href => news_url} News
               %li.phone @bulldogsvolleyball
             %a.mobile-nav-toggle +
       = yield
@@ -64,7 +60,7 @@
                 %iframe{:frameborder => "0", :height => "151", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=one+infinite+loop&aq=&spn=0.006295,0.006295&ie=UTF8&hq=&t=m&ll=41.168409,-81.39711&spn=0.006295,0.006295&z=13&output=embed", :width => "100%"}
             %li.one_third
               .contact-widget
-                %h4 VISIT / GET IN TOUCH
+                %h4 GET IN TOUCH
                 %ul
                   %li
                     %span.right +1 (330) 689-5300
@@ -75,36 +71,28 @@
                   %li
                     %a{:href => "http://twitter.com/bulldogsvolleyball"} @bulldogsvolleyball
                 %ul.socials
-                  %li.facebook
-                    %a{:href => "#"} Facebook
                   %li.twitter
                     %a{:href => "http://twitter.com/bulldogsvolleyball"} Twitter
-                  %li.linkedin
-                    %a{:href => "#"} LinkedIn
-                  %li.vimeo
-                    %a{:href => "#"} Vimeo
-                  %li.youtube
-                    %a{:href => "#"} YouTube
                   %li.rss
                     %a{:href => "#"} RSS
             %li.one_third.last
               .schedule-widget
-                %h4 Hours of Operation
+                %h4 March practice times
                 %ul
                   %li
-                    %span.right 8am - 11pm
-                    Monday - Friday
+                    %span.right TBD
+                    Monday - Thursday
                   %li
-                    %span.right 10am - 10pm
+                    %span.right TBD
+                    Friday
+                  %li
+                    %span.right TBD
                     Saturday
-                  %li
-                    %span.right Closed
-                    Sunday
       %section.bottom
         %section.shell
           %p
             %a#back-to-top.right{:href => "#wrap"} Back to Top
-            %a{:href => "#"} Privacy Policy
+        
     :javascript
       window.jQuery || document.write('<\/script>')
       var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

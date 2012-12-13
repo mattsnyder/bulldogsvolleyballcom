@@ -5,15 +5,15 @@ class HomepageController < ApplicationController
   end
 
   def announcements
-    Announcement.all
+    Announcement.desc(:publish_time).limit(3)
   end
 
   def recent_news
-    Story.all
+    Story.desc(:publish_time).limit(3)
   end
 
   def schedule
-    Event.all
+    Event.upcoming
   end
 
 end

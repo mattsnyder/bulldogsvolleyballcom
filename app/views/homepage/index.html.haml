@@ -40,7 +40,7 @@
                 = link_to "CONTINUE READING", story_url(story)
 
       %li.upcoming-widget.one_third
-        %h4 Schedule
+        %h4 Upcoming Events
         %section.container
           %ul.slides
             - schedule.each do |event|
@@ -49,7 +49,7 @@
                   %span.icon
                     = image_tag "clock.png"
                   %span.right= event.time
-                  %strong= event.title
+                  %strong= "#{event.date.strftime("%b %d")} #{event.title}"
   
       %li#bulldogsvolleyball.tweets-widget.one_third.last
         %h4 Recent Tweets

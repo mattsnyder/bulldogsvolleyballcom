@@ -40,4 +40,4 @@
                     %span.icon
                       = image_tag "clock.png"
                     %span.right= event.time
-                    %strong= event.title
+                    %strong= "#{event.date.strftime("%b %d")} #{event.title}"

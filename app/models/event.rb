@@ -8,4 +8,6 @@ class Event
   field :label,         :type => String
   field :date,          :type => DateTime
   field :details,       :type => String
+
+  scope :upcoming, lambda { where(:date.gte => DateTime.now.utc).asc(:date).limit(15) }
 end

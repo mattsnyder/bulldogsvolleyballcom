@@ -8,10 +8,10 @@ class NewsController < ApplicationController
   end
 
   def news
-    Story.all
+    Story.desc(:publish_time).limit(20)
   end
 
   def events
-    Event.all
+    Event.upcoming
   end
 end
