@@ -1,4 +1,5 @@
 Bulldogsvolleyballcom::Application.routes.draw do
+  match '/admin' => 'admin/dashboard#index', :as => :admin_dashboard
   namespace :admin do
     resources :announcements
     resources :events
