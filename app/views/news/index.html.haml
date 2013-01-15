@@ -6,7 +6,7 @@
     %section#content.news-feed.two_third
       - news.each do |story|
         .one_fourth
-          %img{:src => "css/images/trainer1.jpg", :width => "100%"}/
+          %img{:src => "css/images/bulldoglogo.png", :width => "100%"}/
         .three_fourth.last
           %h4.title
             = link_to story.headline, story_url(story)
@@ -19,7 +19,7 @@
               %strong= story.publication_date.to_s(:pubtime)
           %p= story.body
           %p
-            = link_to "Read More", story_url(story), :class => "continue"
+            / = link_to "Read More", story_url(story), :class => "continue"
         .cl
  
       #pagination

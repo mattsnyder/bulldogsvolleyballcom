@@ -30,14 +30,14 @@
             - recent_news.each do |story|
               %li
                 %h3
-                  = link_to story.headline, story_url(story)
+                  = link_to story.headline, stories_url
                 %h6
                   Posted by
                   %strong= story.author
                   on
                   %strong= story.publication_date.to_s(:pubtime)
                 %p= story.teaser
-                = link_to "CONTINUE READING", story_url(story)
+                = link_to "CONTINUE READING", stories_url
 
       %li.upcoming-widget.one_third
         %h4 Upcoming Events
