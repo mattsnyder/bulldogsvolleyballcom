@@ -8,6 +8,7 @@ Bulldogsvolleyballcom::Application.routes.draw do
 
   devise_for :administrators, :path => "admin"
 
+  match 'super_scrimmage' => 'super_scrimmage#index', :as => :super_scrimmage
   match 'news/:id' => 'news#show', :as => :story
   match 'news' => 'news#index', :as => :news
   match 'calendar/:id' => 'calendar#show', :as => :event

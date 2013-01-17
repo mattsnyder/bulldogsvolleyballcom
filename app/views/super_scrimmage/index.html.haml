@@ -1,0 +1,45 @@
+%section.top-image{:style => "background:url('/assets/volleyballssmaller.jpg') no-repeat top center;"}
+  %h1 Super Scrimmage
+%section#bottom
+  %section.shell
+    %section#content.news-feed.two_third
+      %h4.title Super Scrimmage
+      %p 
+        The Super Scrimmage is on!! On March 23rd teams will have the opportunity to maximize their scrimmage opportunity
+        and get a first look at other teams. Each team is guaranteed to play each other team once. Games will start at 9AM 
+        with a coaches meeting at 8:30AM.
+      %p 
+        We can accept up to 12 teams total. Is your team on the list??
+        %ul
+          %li Brecksville
+          %li Brunswick
+          %li Green
+          %li Hoban
+          %li Kent
+          %li Medina
+          %li St Eds
+          %li Stow
+          %li VASJ      
+          %li - open -
+          %li - open -
+          %li - open -
+
+      %p Want on the list? Email Matt Snyder at snyder2112 at me.com. Cost for the tournament is $25.
+
+    %aside.one_third.last
+      %ul.widgets
+        %li.upcoming-widget
+          %h4 Upcoming Events
+          %section.container
+            %ul.slides
+              - events.each do |event|
+                %li
+                  %a{:href => "#"}
+                    %span.icon
+                      = image_tag "clock.png"
+                    %span.right= event.time
+                    %strong= "#{event.date.strftime("%b %d")} #{event.title}"
+
+        %li#bulldogsvball.tweets-widget
+          %h4 Recent Tweets
+          %section.container
