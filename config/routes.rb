@@ -6,6 +6,8 @@ Bulldogsvolleyballcom::Application.routes.draw do
     resources :stories
   end
 
+  devise_for :administrators, :path => "admin"
+
   match 'news/:id' => 'news#show', :as => :story
   match 'news' => 'news#index', :as => :news
   match 'calendar/:id' => 'calendar#show', :as => :event

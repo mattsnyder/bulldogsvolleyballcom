@@ -1,2 +1,3 @@
-class Admin::EventsController < InheritedResources::Base
+class Admin::EventsController < Admin::BaseController
+  inherit_resources
 end
