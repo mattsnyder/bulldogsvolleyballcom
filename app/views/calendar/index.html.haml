@@ -36,90 +36,15 @@
 
       %ul.widgets
         %li.mobile-calendar
-          %h4.title Upcoming Classes
+          %h4 Upcoming Events
           %section.container
             %ul.slides
-              %li
-                %a{:href => "#"}
-                  %span.icon
-                    %img{:alt => "", :src => "css/images/clock.png"}/
-                  %span.right 2pm - 3pm
-                  %strong Indoor Cycling
-              %li
-                %a{:href => "#"}
-                  %span.icon
-                    %img{:alt => "", :src => "css/images/clock.png"}/
-                  %span.right 3pm - 3:30pm
-                  %strong Cardio Fitness
-              %li
-                %a{:href => "#"}
-                  %span.icon
-                    %img{:alt => "", :src => "css/images/clock.png"}/
-                  %span.right 4pm - 6pm
-                  %strong Advanced Cardio
-              %li
-                %a{:href => "#"}
-                  %span.icon
-                    %img{:alt => "", :src => "css/images/clock.png"}/
-                  %span.right 7pm - 7:30pm
-                  %strong Intro to Yoga
-              %li
-                %a{:href => "#"}
-                  %span.icon
-                    %img{:alt => "", :src => "css/images/clock.png"}/
-                  %span.right 8pm - 11pm
-                  %strong Advanced Boxing
-              %li
-                %a{:href => "#"}
-                  %span.icon
-                    %img{:alt => "", :src => "css/images/clock.png"}/
-                  %span.right 7am - 8am
-                  %strong Advanced Cardio
-              %li
-                %a{:href => "#"}
-                  %span.icon
-                    %img{:alt => "", :src => "css/images/clock.png"}/
-                  %span.right 9:30am - 11am
-                  %strong Intro to Yoga
-              %li
-                %a{:href => "#"}
-                  %span.icon
-                    %img{:alt => "", :src => "css/images/clock.png"}/
-                  %span.right 2pm - 3pm
-                  %strong Indoor Cycling
-              %li
-                %a{:href => "#"}
-                  %span.icon
-                    %img{:alt => "", :src => "css/images/clock.png"}/
-                  %span.right 3pm - 3:30pm
-                  %strong Cardio Fitness
-              %li
-                %a{:href => "#"}
-                  %span.icon
-                    %img{:alt => "", :src => "css/images/clock.png"}/
-                  %span.right 4pm - 6pm
-                  %strong Advanced Cardio
-              %li
-                %a{:href => "#"}
-                  %span.icon
-                    %img{:alt => "", :src => "css/images/clock.png"}/
-                  %span.right 7pm - 7:30pm
-                  %strong Intro to Yoga
-              %li
-                %a{:href => "#"}
-                  %span.icon
-                    %img{:alt => "", :src => "css/images/clock.png"}/
-                  %span.right 8pm - 11pm
-                  %strong Advanced Boxing
-              %li
-                %a{:href => "#"}
-                  %span.icon
-                    %img{:alt => "", :src => "css/images/clock.png"}/
-                  %span.right 7am - 8am
-                  %strong Advanced Cardio
-              %li
-                %a{:href => "#"}
-                  %span.icon
-                    %img{:alt => "", :src => "css/images/clock.png"}/
-                  %span.right 9:30am - 11am
-                  %strong Intro to Yoga
+              - events.each do |event|
+                %li
+                  %a{:href => "#"}
+                    %span.icon
+                      = image_tag "clock.png"
+                    %span.right= event.time
+                    %strong= "#{event.date.strftime("%b %d")} #{event.title} @ #{event.location}"
+
+
