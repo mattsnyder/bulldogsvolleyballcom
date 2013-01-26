@@ -30,7 +30,7 @@
                   %span.day= date.day
                   - day_events(date, events).each do |event|
                     %div{:class => "item #{event.label.parameterize}"}
-                      = event.title
+                      = link_to event.title, event_url(event)
                       %span.time= event.time
                       %span.time= event.location
 

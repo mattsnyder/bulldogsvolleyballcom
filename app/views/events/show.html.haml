@@ -1,0 +1,36 @@
+%section.top-image{:style => "background:url('/assets/handsblocking.jpg') no-repeat top center;"}
+  %h1= event.title
+
+%section#bottom
+  %section.shell
+    %section#content.news-feed.two_third
+      .one_fourth
+        %img{:src => "/assets/bulldoglogo.png", :width => "100%"}/
+      .three_fourth.last
+        %h4.title= event.title
+        .post-meta
+          = event.location
+          %strong
+            = event.time
+          on
+          = succeed "." do
+            %strong= event.date.to_s(:pubtime)
+        %p= event.details
+        %p
+          
+        .cl
+ 
+
+    %aside.one_third.last
+      %ul.widgets
+        %li.upcoming-widget
+          %h4 Upcoming Events
+          %section.container
+            %ul.slides
+              - events.each do |event|
+                %li
+                  %a{:href => "#"}
+                    %span.icon
+                      = image_tag "clock.png"
+                    %span.right= event.time
+                    %strong= "#{event.date.strftime("%b %d")} #{event.title}"

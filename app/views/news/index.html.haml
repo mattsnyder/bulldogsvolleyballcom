@@ -31,7 +31,7 @@
             %ul.slides
               - events.each do |event|
                 %li
-                  %a{:href => "#"}
+                  %a{:href => event_url(event)}
                     %span.icon
                       = image_tag "clock.png"
                     %span.right= event.time

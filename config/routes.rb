@@ -11,7 +11,7 @@ Bulldogsvolleyballcom::Application.routes.draw do
   match 'super_scrimmage' => 'super_scrimmage#index', :as => :super_scrimmage
   match 'news/:id' => 'news#show', :as => :story
   match 'news' => 'news#index', :as => :news
-  match 'calendar/:id' => 'calendar#show', :as => :event
+  match 'calendar/:id' => 'events#show', :as => :event
   match 'calendar' => 'calendar#index', :as => :events
   match 'calendar/:year/:month' => 'calendar#index', :as => :month
 
