@@ -13,7 +13,7 @@
           .post-meta
             Posted by
             %strong
-              %a{:href => "trainer.html"}= story.author
+              %a{:href => "#"}= story.author
             on
             = succeed "." do
               %strong= story.publication_date.to_s(:pubtime)
