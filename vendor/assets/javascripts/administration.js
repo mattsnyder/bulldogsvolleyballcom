@@ -39,6 +39,3 @@
 
 //= require mwsadmin/bootstrap.min
 //= require mwsadmin/core/mws
-
-// FOR SETUP, REMOVE
-//= require mwsadmin/demo/demo.dashboard
