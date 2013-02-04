@@ -6,7 +6,7 @@ Bulldogsvolleyballcom::Application.routes.draw do
     resources :stories
   end
 
-  devise_for :administrators, :path => "admin"
+  devise_for :administrators, :path => "admin", :controllers => { :sessions => "admin/administrator_sessions" }
 
   match 'super_scrimmage' => 'super_scrimmage#index', :as => :super_scrimmage
   match 'news/:id' => 'news#show', :as => :story
