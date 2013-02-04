@@ -1,9 +1,12 @@
 .mws-panel.grid_8.mws-collapsible
   .mws-panel-header
     %span
-      %i.icon-table
+      %i.icon-list
       = controller.controller_name.titleize
-      = link_to "(New)", url_for(:controller => controller.controller_name, :action => 'new')
+  .mws-panel-toolbar
+    .btn-toolbar
+      .btn-group
+        = link_to "<i class='icol-add'></i> Add New #{controller.controller_name.singularize.titleize}".html_safe, url_for(:controller => controller.controller_name, :action => 'new'), :class => 'btn'
   .mws-panel-body.no-padding
     - if collection.any?  
       %table.mws-table.mws-datatable
