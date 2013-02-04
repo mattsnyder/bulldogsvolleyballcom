@@ -8,6 +8,7 @@ gem 'inherited_resources'
 gem 'unicorn'
 gem 'haml-rails'
 gem 'devise'
+gem 'icalendar'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -32,4 +33,3 @@ group 'test' do
   gem 'pry'
   gem 'rspec-rails'
 end
-

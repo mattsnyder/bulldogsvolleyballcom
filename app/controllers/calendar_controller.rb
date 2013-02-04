@@ -1,6 +1,12 @@
 class CalendarController < ApplicationController
   helper_method :month, :selected_month, :next_month, :previous_month, :day_events, :events
   def index
+    respond_to do |wants|
+      wants.html
+      wants.ics do
+        render :text => Event.ical
+      end
+    end
   end
 
   def events
