@@ -1,24 +1,25 @@
-= form_for(resource, :url => (resource.new_record? ? collection_url : resource_url(resource)), :html => { :method => (resource.new_record? ? "post" : "put") }) do |f|
+.mws-panel.grid_8
+  .mws-panel-header
+    %span
+      %i.icon-list
+        = controller.controller_name.titleize
+  .mws-panel-toolbar
+    .btn-toolbar
+      .btn-group
+        = link_to "<i class='icol-arrow-left'></i> Back to Index".html_safe, collection_url, :class => 'btn'
 
-  %table    
-    - if resource.errors.any?
-      %tr
-        %td{:colspan => "2"}
-          %h2
-            = pluralize(resource.errors.count, "error")
-            prohibited this #{resource.class.to_s.titleize} from being saved:
-          %ul
-            - resource.errors.full_messages.each do |msg|
-              %li= msg
-    - resource.class.fields.each do |field|
-      - name = field.first
-      - next if ['id', 'created_at', 'updated_at', '_id', '_type'].include?(name)
-      %tr
-        %td= name.titleize
-        - if field[1].type.to_s == "Boolean" then
-          %td=f.check_box name.to_sym, {}, true, false
-        - else
-          %td= f.text_field name.to_sym, :class => 'inputbox'
-    %tr
-      %td{:colspan => "2"}
-        = f.submit :class => 'btn'
+  .mws-panel-body.no-padding
+    = form_for(resource, :url => (resource.new_record? ? collection_url : resource_url(resource)), :html => { :class => 'mws-form', :method => (resource.new_record? ? "post" : "put") }) do |f|
+      .mws-form-block
+        - resource.class.fields.each do |field|
+          - name = field.first
+          - next if ['id', 'created_at', 'updated_at', '_id', '_type'].include?(name)
+          .mws-form-row
+            %label= name.titleize
+            .mws-form-item
+              - if field[1].type.to_s == "DateTime"
+                = f.text_field name.to_sym            
+              - else
+                = f.text_area name.to_sym
+        .mws-button-row
+          = f.submit :class => 'btn'
