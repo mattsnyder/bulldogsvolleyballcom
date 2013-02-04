@@ -11,14 +11,14 @@
     border-top: 0;
     border-bottom: 0;
     padding-top: 1px;
-    background: url(../images/core/mws-nav-ruler.png) repeat-x left top;
+    background: url(/assets/mwsadmin/core/mws-nav-ruler.png) repeat-x left top;
 }
 
 .lt-ie9 #mws-navigation > ul > li {
     border-top: 0;
     border-bottom: 0;
     padding-bottom: 2px;
-    background: url(../images/core/mws-nav-ruler.png) repeat-x left bottom;
+    background: url(/assets/mwsadmin/core/mws-nav-ruler.png) repeat-x left bottom;
 }
 
 .lt-ie9 .mws-inset, 
@@ -28,7 +28,7 @@
 .lt-ie9 .dataTables_wrapper .dataTables_paginate {
     background-color: transparent;
     background-repeat: repeat;
-    background-image: url(../images/core/alpha.png);
+    background-image: url(/assets/mwsadmin/core/alpha.png);
 }
 
 .lt-ie9 select, 

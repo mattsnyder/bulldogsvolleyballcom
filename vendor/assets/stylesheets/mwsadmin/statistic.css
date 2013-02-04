@@ -87,12 +87,12 @@
 }
 
 .mws-stat .mws-stat-content .mws-stat-value.up {
-    background: url(../images/core/report-up.png) no-repeat right center;
+    background: url(/assets/mwsadmin/core/report-up.png) no-repeat right center;
     padding-right: 24px;
 }
 
 .mws-stat .mws-stat-content .mws-stat-value.down {
-    background: url(../images/core/report-down.png) no-repeat right center;
+    background: url(/assets/mwsadmin/core/report-down.png) no-repeat right center;
     padding-right: 24px;
 }
 

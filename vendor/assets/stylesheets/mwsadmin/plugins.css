@@ -61,7 +61,7 @@ div.jGrowl div.jGrowl-notification, div.jGrowl div.jGrowl-closer {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    background-image: url(../images/core/mws-dark-bg.png);
+    background-image: url(/assets/mwsadmin/core/mws-dark-bg.png);
     border: 1px solid #666666;
     font-family: 'PTSansRegular', Arial, Helvetica, sans-serif;
 }

@@ -69,14 +69,14 @@
     padding: 4px 6px 4px 58px;
     position: relative;
     border: 1px solid #666666;
-    background: #35353a url(../images/core/mws-dark-bg.png);
+    background: #35353a url(/assets/mwsadmin/core/mws-dark-bg.png);
     -webkit-border-radius: 4px 0 0 0;
     -moz-border-radius: 4px 0 0 0;
     border-radius: 4px 0 0 0;
 }
 
 #mws-themer #mws-themer-ribbon {
-    background: url(../images/core/themer.png) no-repeat;
+    background: url(/assets/mwsadmin/core/themer.png) no-repeat;
     width: 53px;
     height: 109px;
     position: absolute;
