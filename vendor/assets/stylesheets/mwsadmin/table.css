@@ -102,15 +102,15 @@
 }
 
 .dataTables_wrapper table thead th.sorting {
-    background-image: url(../images/core/sort.png);
+    background-image: url(/assets/mwsadmin/core/sort.png);
 }
 
 .dataTables_wrapper table thead th.sorting_asc {
-    background-image: url(../images/core/sort_asc.png);
+    background-image: url(/assets/mwsadmin/core/sort_asc.png);
 }
 
 .dataTables_wrapper table thead th.sorting_desc {
-    background-image: url(../images/core/sort_desc.png);
+    background-image: url(/assets/mwsadmin/core/sort_desc.png);
 }
 
 .dataTables_wrapper:before,
@@ -186,7 +186,7 @@
 
 .dataTables_wrapper .dataTables_paginate .paginate_disabled_previous, 
 .dataTables_wrapper .dataTables_paginate .paginate_enabled_previous {
-    background-image: url(../images/core/arrow-left.png);
+    background-image: url(/assets/mwsadmin/core/arrow-left.png);
     background-repeat: no-repeat;
     background-position: center center;
     margin-right: 1px;
@@ -204,7 +204,7 @@
 
 .dataTables_wrapper .dataTables_paginate .paginate_disabled_next, 
 .dataTables_wrapper .dataTables_paginate .paginate_enabled_next {
-    background-image: url(../images/core/arrow-right.png);
+    background-image: url(/assets/mwsadmin/core/arrow-right.png);
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-border-radius: 0 4px 4px 0;

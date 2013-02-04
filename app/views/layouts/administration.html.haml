@@ -32,7 +32,7 @@
       #mws-logo-container
         / Logo Wrapper, images put within this wrapper will always be vertically centered
         #mws-logo-wrap
-          = link_to image_tag("stowbulldogs.png"), admin_dashboard_url
+          = link_to image_tag("stowbulldogs-yellow.png"), admin_dashboard_url
       / User Tools (notifications, logout, profile, change password)
       #mws-user-tools.clearfix
         / Notifications
@@ -52,7 +52,9 @@
         / Main Navigation
         = render "admin/navigation" if administrator_signed_in?
       / Main Container Start
-      = yield
+      #mws-container.clearfix
+        .container
+          = yield
 
 
 

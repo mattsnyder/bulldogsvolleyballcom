@@ -1,21 +1,32 @@
-= link_to "New #{controller.controller_name.titleize.singularize}", url_for(:controller => controller.controller_name, :action => 'new')
-
-- if collection.any?
-  %table{:width => "100%"}
-    %thead
-      %tr
-        %th{:colspan => 2} Actions
-        - collection.first.class.fields.each do |mongo_field|
-          - field = mongo_field.first
-          - next if ['_type', '_id', 'id', 'created_at', 'updated_at'].include?(field)
-          %th= field.titleize
-    %tbody
-      - collection.each do |r|
-        %tr{:class => "#{cycle('','alt ')}"}
-          %td= link_to "Delete", resource_url(r), :confirm => 'Are you sure?', :method => :delete
-          %td= link_to "Edit", edit_resource_url(r)
-          - r.class.fields.each do |mongo_field|
+.mws-panel.grid_8.mws-collapsible
+  .mws-panel-header
+    %span
+      %i.icon-table
+      = controller.controller_name.titleize
+      = link_to "(New)", url_for(:controller => controller.controller_name, :action => 'new')
+  .mws-panel-body.no-padding
+    %table.mws-table.mws-datatable
+      %thead
+        %tr
+          - collection.first.class.fields.each do |mongo_field|
             - field = mongo_field.first
             - next if ['_type', '_id', 'id', 'created_at', 'updated_at'].include?(field)
-            %td= r.send(field)
-  
+            %th= field.titleize
+          %th
+      %tbody
+        - collection.each do |r|
+          %tr
+            - r.class.fields.each do |mongo_field|
+              - field = mongo_field.first
+              - next if ['_type', '_id', 'id', 'created_at', 'updated_at'].include?(field)
+              %td= r.send(field)
+            %td
+              %span.btn-group
+                = link_to "<i class='icon-pencil'></i>".html_safe, edit_resource_url(r), :class => 'btn btn-small'
+                = link_to "<i class='icon-trash'></i>".html_safe, resource_url(r), :confirm => 'Are you sure?', :method => :delete, :class => 'btn btn-small' 
+
+= javascript_include_tag "mwsadmin/plugins/datatables/jquery.dataTables"
+:javascript
+  $(document).ready(function(){
+    $('.mws-datatable').dataTable();
+  });
