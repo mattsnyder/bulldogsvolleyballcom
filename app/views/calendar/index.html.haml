@@ -36,15 +36,7 @@
 
       %ul.widgets
         %li.mobile-calendar
-          %h4 Upcoming Events
-          %section.container
-            %ul.slides
-              - events.each do |event|
-                %li
-                  %a{:href => "#"}
-                    %span.icon
-                      = image_tag "clock.png"
-                    %span.right= event.time
-                    %strong= "#{event.date.strftime("%b %d")} #{event.title} @ #{event.location}"
+          = render 'calendar/upcoming', :events => Event.upcoming
 
 
+= events.map(&:start_datetime).map(&:day)

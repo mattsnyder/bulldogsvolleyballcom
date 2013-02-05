@@ -4,16 +4,22 @@ class Event
   include Icalendar
 
 
-  field :location,      :type => String
-  field :title,         :type => String
-  field :time,          :type => String
+  field :location,          :type => String
+  field :title,             :type => String
   field :start_datetime,    :type => DateTime
   field :end_datetime,      :type => DateTime
-  field :label,         :type => String
-  field :date,          :type => DateTime
-  field :details,       :type => String
+  field :label,             :type => String
+  field :details,           :type => String
 
-  scope :upcoming, lambda { where(:date.gte => DateTime.now.utc).asc(:date).limit(15) }
+  def date
+    "#{start_datetime.strftime("%b %d %I:%M%p")} - #{end_datetime.strftime("%I:%M%p")}"
+  end
+
+  def time
+    "#{start_datetime.strftime("%I:%M%p")} - #{end_datetime.strftime("%I:%M%p")}"
+  end
+
+  scope :upcoming, lambda { where(:start_datetime.gte => DateTime.now.utc - 1.day).asc(:date).limit(30) }
 
   def self.ical
     calendar = Calendar.new

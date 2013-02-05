@@ -9,7 +9,7 @@
           %img{:src => "/assets/bulldoglogo.png", :width => "100%"}/
         .three_fourth.last
           %h4.title
-            = link_to story.headline, story_url(story)
+            = link_to story.headline, "#"
           .post-meta
             Posted by
             %strong
@@ -26,13 +26,4 @@
     %aside.one_third.last
       %ul.widgets
         %li.upcoming-widget
-          %h4 Upcoming Events
-          %section.container
-            %ul.slides
-              - events.each do |event|
-                %li
-                  %a{:href => event_url(event)}
-                    %span.icon
-                      = image_tag "clock.png"
-                    %span.right= event.time
-                    %strong= "#{event.date.strftime("%b %d")} #{event.title}"
+          = render 'calendar/upcoming', :events => events

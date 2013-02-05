@@ -40,16 +40,7 @@
                 / = link_to "CONTINUE READING", news_url
 
       %li.upcoming-widget.one_third
-        %h4 Upcoming Events
-        %section.container
-          %ul.slides
-            - schedule.each do |event|
-              %li
-                %a{:href => event_url(event)}
-                  %span.icon
-                    = image_tag "clock.png"
-                  %span.right= event.time
-                  %strong= "#{event.date.strftime("%b %d")} #{event.title}"
+        = render 'calendar/upcoming', :events => schedule
   
       %li#bulldogsvball.tweets-widget.one_third.last
         %h4 Recent Tweets

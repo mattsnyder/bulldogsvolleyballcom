@@ -12,13 +12,13 @@ class CalendarController < ApplicationController
   def events
     @selected_months_events ||=
       Event.where(
-                  :date.gte => selected_month.beginning_of_month.to_datetime.utc, :date.lte => selected_month.end_of_month.to_time.to_datetime.utc
+                  :start_datetime.gte => selected_month.beginning_of_month.to_datetime.utc - 1.week, :end_datetime.lte => selected_month.end_of_month.to_time.to_datetime.utc + 1.week
                   )
 
   end
 
   def day_events(date, events)
-    events.select { |e| e.date == date }
+    events.select { |e| e.start_datetime.day == date.day && e.start_datetime.month == date.month }
   end
 
   def selected_month

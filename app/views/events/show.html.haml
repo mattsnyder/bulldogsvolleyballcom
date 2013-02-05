@@ -14,7 +14,7 @@
             = event.time
           on
           = succeed "." do
-            %strong= event.date.to_s(:pubtime)
+            %strong= event.date
         %p= event.details
         %p
           
@@ -24,13 +24,4 @@
     %aside.one_third.last
       %ul.widgets
         %li.upcoming-widget
-          %h4 Upcoming Events
-          %section.container
-            %ul.slides
-              - events.each do |event|
-                %li
-                  %a{:href => event_url(event)}
-                    %span.icon
-                      = image_tag "clock.png"
-                    %span.right= event.time
-                    %strong= "#{event.date.strftime("%b %d")} #{event.title}"
+          = render 'calendar/upcoming'
