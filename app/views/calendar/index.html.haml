@@ -37,6 +37,3 @@
       %ul.widgets
         %li.mobile-calendar
           = render 'calendar/upcoming', :events => Event.upcoming
-
-
-= events.map(&:start_datetime).map(&:day)
