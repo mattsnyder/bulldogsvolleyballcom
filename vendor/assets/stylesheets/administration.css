@@ -12,20 +12,16 @@
  *
  *= require mwsadmin/plugins/colorpicker/colorpicker
  *= require mwsadmin/custom-plugins/wizard/wizard
-
  *= require mwsadmin/bootstrap
  *= require mwsadmin/fonts/ptsans/stylesheet
  *= require mwsadmin/fonts/icomoon/style
-
  *= require mwsadmin/mws-style
  *= require mwsadmin/icons/icol16
  *= require mwsadmin/icons/icol32
-
  *= require mwsadmin/jui/css/jquery.ui.all
  *= require mwsadmin/jui/jquery-ui.custom
-
  *= require mwsadmin/login
-
+ *= require mwsadmin/manifest
  *= require mwsadmin/mws-theme
  */
 
