@@ -29,7 +29,6 @@
                   = link_to "<i class='icon-pencil'></i>".html_safe, edit_resource_url(r), :class => 'btn btn-small'
                   = link_to "<i class='icon-trash'></i>".html_safe, resource_url(r), :confirm => 'Are you sure?', :method => :delete, :class => 'btn btn-small' 
 
-= javascript_include_tag "mwsadmin/plugins/datatables/jquery.dataTables"
 :javascript
   $(document).ready(function(){
     $('.mws-datatable').dataTable();
