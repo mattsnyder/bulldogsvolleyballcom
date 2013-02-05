@@ -62,7 +62,7 @@ module Bulldogsvolleyballcom
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    config.assets.precompile += ['administration.js', 'administration.css']
+    config.assets.precompile += ['administration.js', 'administration.css', 'mwsadmin/core/login.js']
     config.assets.initialize_on_precompile = false
 
     # Version of your assets, change this if you want to expire all your assets
