@@ -1,87 +1,17 @@
 #mws-user-notif.mws-dropdown-menu
-  %a.mws-dropdown-trigger{"data-toggle" => "dropdown", :href => "#"}
-    %i.icon-exclamation-sign
-  / Unread notification count
-  %span.mws-dropdown-notif 35
-  / Notifications dropdown
-  .mws-dropdown-box
-    .mws-dropdown-content
-      %ul.mws-notifications
-        %li.read
-          %a{:href => "#"}
-            %span.message
-              Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-            %span.time
-              January 21, 2012
-        %li.read
-          %a{:href => "#"}
-            %span.message
-              Lorem ipsum dolor sit amet
-            %span.time
-              January 21, 2012
-        %li.unread
-          %a{:href => "#"}
-            %span.message
-              Lorem ipsum dolor sit amet
-            %span.time
-              January 21, 2012
-        %li.unread
-          %a{:href => "#"}
-            %span.message
-              Lorem ipsum dolor sit amet
-            %span.time
-              January 21, 2012
-      .mws-dropdown-viewall
-        %a{:href => "#"} View All Notifications
-/ Messages
+
 #mws-user-message.mws-dropdown-menu
-  %a.mws-dropdown-trigger{"data-toggle" => "dropdown", :href => "#"}
-    %i.icon-envelope
-  / Unred messages count
-  %span.mws-dropdown-notif 35
-  / Messages dropdown
-  .mws-dropdown-box
-    .mws-dropdown-content
-      %ul.mws-messages
-        %li.read
-          %a{:href => "#"}
-            %span.sender John Doe
-            %span.message
-              Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-            %span.time
-              January 21, 2012
-        %li.read
-          %a{:href => "#"}
-            %span.sender John Doe
-            %span.message
-              Lorem ipsum dolor sit amet
-            %span.time
-              January 21, 2012
-        %li.unread
-          %a{:href => "#"}
-            %span.sender John Doe
-            %span.message
-              Lorem ipsum dolor sit amet
-            %span.time
-              January 21, 2012
-        %li.unread
-          %a{:href => "#"}
-            %span.sender John Doe
-            %span.message
-              Lorem ipsum dolor sit amet
-            %span.time
-              January 21, 2012
-      .mws-dropdown-viewall
-        %a{:href => "#"} View All Messages
+
 / User Information and functions section
 #mws-user-info.mws-inset
   / User Photo
   #mws-user-photo
-    %img{:alt => "User Photo", :src => "example/profile.jpg"}
+    = image_tag "bulldoghead.png"
   / Username and Functions
   #mws-user-functions
     #mws-username
-      Hello, John Doe
+      Hello, 
+      = current_administrator.email
     %ul
       %li
         %a{:href => "#"} Profile
