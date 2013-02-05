@@ -33,7 +33,13 @@
               %li
                 %a{:href => root_url} Home
               %li
-                %a{:href => events_url} Calendar
+                %a{:href => events_url} 
+                  Calendar 
+                  %span.arrow
+                %section.dropdown
+                  %ul
+                    %li= link_to "View Calendar", events_url
+                    %li= link_to "Subscribe to Calendar", events_url(:format => 'ics')
               %li
                 %a{:href => super_scrimmage_url} Super Scrimmage
               %li
@@ -44,7 +50,13 @@
               %li
                 %a{:href => root_url} Home
               %li
-                %a{:href => events_url} Calendar
+                %a{:href => events_url} 
+                  Calendar 
+                  %span.arrow
+                %section.dropdown
+                  %ul
+                    %li= link_to "View Calendar", events_url
+                    %li= link_to "Subscribe to Calendar", events_url(:format => 'ics')
               %li
                 %a{:href => super_scrimmage_url} Super Scrimmage
               %li
@@ -77,7 +89,7 @@
                   %li.twitter
                     %a{:href => "http://twitter.com/bulldogsvball"} Twitter
                   %li.rss
-                    %a{:href => "#"} RSS
+                    %a{:href => events_url(:format => "ics")} RSS
             %li.one_third.last
               .schedule-widget
                 %h4 March practice times
