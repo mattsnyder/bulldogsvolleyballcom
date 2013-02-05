@@ -10,7 +10,7 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
+// #  require jquery
 //= require jquery_ujs
 //= require mwsadmin/libs/jquery.placeholder.min
 //= require mwsadmin/custom-plugins/fileinput
@@ -26,16 +26,16 @@
 //= require mwsadmin/custom-plugins/fileinput
 //= require mwsadmin/jui/js/jquery.ui.touch-punch
 //= require mwsadmin/plugins/datatables/jquery.dataTables.min
-//= require mwsadmin/plugins/datatables/jquery.dataTables.min
 //= require mwsadmin/libs/excanvas.min
 //= require mwsadmin/plugins/flot/jquery.flot.min
 //= require mwsadmin/plugins/flot/plugins/jquery.flot.tooltip.min
 //= require mwsadmin/plugins/flot/plugins/jquery.flot.pie.min
 //= require mwsadmin/plugins/flot/plugins/jquery.flot.stack.min
 //= require mwsadmin/plugins/flot/plugins/jquery.flot.resize.min
-//= require mwsadmin/plugins/colorpicker/colorpicker-min
+//= require mwsadmin/jui/js/timepicker/jquery-ui-timepicker.min
 //= require mwsadmin/plugins/validate/jquery.validate-min
 //= require mwsadmin/custom-plugins/wizard/wizard.min
+
 
 //= require mwsadmin/bootstrap.min
 //= require mwsadmin/core/mws

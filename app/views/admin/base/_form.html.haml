@@ -1,4 +1,4 @@
-.mws-panel.grid_8
+.mws-panel.grid_6
   .mws-panel-header
     %span
       %i.icon-list
@@ -7,7 +7,9 @@
     .btn-toolbar
       .btn-group
         = link_to "<i class='icol-arrow-left'></i> Back to Index".html_safe, collection_url, :class => 'btn'
-
+        - unless resource.new_record?
+          = link_to "<i class='icol-add'></i> Add New #{controller.controller_name.singularize.titleize}".html_safe, url_for(:controller => controller.controller_name, :action => 'new'), :class => 'btn'
+          = link_to "<i class='icol-cross'></i> Delete".html_safe, resource_url(resource), :confirm => 'Are you sure?', :method => :delete, :class => 'btn'
   .mws-panel-body.no-padding
     = form_for(resource, :url => (resource.new_record? ? collection_url : resource_url(resource)), :html => { :class => 'mws-form', :method => (resource.new_record? ? "post" : "put") }) do |f|
       .mws-form-block
@@ -17,9 +19,20 @@
           .mws-form-row
             %label= name.titleize
             .mws-form-item
-              - if field[1].type.to_s == "DateTime"
-                = f.text_field name.to_sym            
+              - if field[1].type.to_s == "DateTime"                
+                = f.text_field name.to_sym, :class => "mws-dtpicker large"
               - else
                 = f.text_area name.to_sym
         .mws-button-row
           = f.submit :class => 'btn'
+
+
+:javascript
+  $(document).ready(function(){
+    if( $.fn.datetimepicker ) {
+      $(".mws-dtpicker").datetimepicker({
+         dateFormat: "yy-mm-dd",
+         timeFormat: "hh:mm z"
+        });
+    }
+  }); 
