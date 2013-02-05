@@ -30,5 +30,5 @@
 //= require mwsadmin/jui/js/timepicker/jquery-ui-timepicker.min
 //= require mwsadmin/plugins/validate/jquery.validate-min
 //= require mwsadmin/custom-plugins/wizard/wizard.min
-//= require mwsadmin/bootstrap.min
+//= require mwsadmin/bootstrap
 //= require mwsadmin/core/mws
