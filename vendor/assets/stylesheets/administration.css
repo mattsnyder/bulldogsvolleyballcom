@@ -28,3 +28,7 @@
 
  *= require mwsadmin/mws-theme
  */
+
+.ui-timepicker-div {
+  color: white
+}
