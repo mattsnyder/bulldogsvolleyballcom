@@ -22,23 +22,14 @@
           %li St Eds
           %li Stow
           %li VASJ      
-          %li - open -
+          %li St. Ignatius
 
-      %p Want on the list? Email Matt Snyder at snyder2112 at me.com. Cost for the tournament is $25.
+      %p Cost for the tournament is $25.
 
     %aside.one_third.last
       %ul.widgets
         %li.upcoming-widget
-          %h4 Upcoming Events
-          %section.container
-            %ul.slides
-              - events.each do |event|
-                %li
-                  %a{:href => "#"}
-                    %span.icon
-                      = image_tag "clock.png"
-                    %span.right= event.time
-                    %strong= "#{event.date.strftime("%b %d")} #{event.title}"
+          = render 'calendar/upcoming', :events => events
 
         %li#bulldogsvball.tweets-widget
           %h4 Recent Tweets
