@@ -19,7 +19,7 @@ class Event
     "#{start_datetime.strftime("%I:%M%p")} - #{end_datetime.strftime("%I:%M%p")}"
   end
 
-  scope :upcoming, lambda { where(:start_datetime.gte => DateTime.now.utc - 1.day).asc(:date).limit(30) }
+  scope :upcoming, lambda { where(:start_datetime.gte => DateTime.now.utc - 1.day).asc(:start_datetime).limit(30) }
 
   def self.ical
     calendar = Calendar.new
