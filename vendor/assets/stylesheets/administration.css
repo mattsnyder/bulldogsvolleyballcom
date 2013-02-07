@@ -11,8 +11,6 @@
  *= require_self
  *= require_tree ./mwsadmin
  *
- *= require mwsadmin/plugins/colorpicker/colorpicker
- *= require mwsadmin/custom-plugins/wizard/wizard
  *= require mwsadmin/bootstrap
  *= require mwsadmin/fonts/ptsans/stylesheet
  *= require mwsadmin/fonts/icomoon/style

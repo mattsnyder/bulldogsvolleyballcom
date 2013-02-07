@@ -28,9 +28,10 @@ class Event
   end
 
   def to_ics
+    zone = ActiveSupport::TimeZone.new("Eastern Time (US & Canada)")
     event = Event.new
-    event.dtstart ics_start_datetime
-    event.dtend ics_end_datetime
+    event.dtstart((start_datetime).strftime('%Y%m%dT%H%M%S'))
+    event.dtend((end_datetime).strftime('%Y%m%dT%H%M%S'))
     event.summary = self.title
     event.location = self.location
     event.uid = self.id.to_s
@@ -39,17 +40,4 @@ class Event
     event
   end
 
-  def ics_start_datetime
-    return "" unless self.start_datetime
-    self.class.ics_datetime(self.start_datetime) # Note: utc_start_datetime should be different than the local time of the event
-  end
-
-  def ics_end_datetime
-    return "" unless self.end_datetime
-    self.class.ics_datetime(self.end_datetime) # Note: utc_end_datetime should be different than the local time of the event
-  end
-
-  def self.ics_datetime(utc_time_obj)
-    utc_time_obj.strftime('%Y%m%dT%H%M%SZ')
-  end
 end

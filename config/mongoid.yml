@@ -3,6 +3,8 @@ development:
   sessions:
     # Defines the default session. (required)
     default:
+      use_utc: false
+      use_activesupport_time_zone: true
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
       database: bulldogsvolleyballcom_development
@@ -82,6 +84,8 @@ test:
 production:
   sessions:
     default:
+      use_utc: false
+      use_activesupport_time_zone: true
       uri: <%= ENV['MONGOLAB_URI'] %>
       options:
         skip_version_check: true
