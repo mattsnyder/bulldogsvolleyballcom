@@ -30,7 +30,7 @@
             - recent_news.each do |story|
               %li
                 %h3
-                  = link_to story.headline, news_url
+                  = link_to story.headline, story_url(story)
                 %h6
                   Posted by
                   %strong= story.author

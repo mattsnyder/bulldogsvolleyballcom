@@ -9,7 +9,7 @@ class HomepageController < ApplicationController
   end
 
   def recent_news
-    Story.desc(:publish_time).limit(3)
+    Story.recent
   end
 
   def schedule

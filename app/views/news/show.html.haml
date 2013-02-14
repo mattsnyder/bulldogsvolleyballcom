@@ -1,0 +1,26 @@
+%section.top-image{:style => "background:url('/assets/volleyballssmaller.jpg') no-repeat top center;"}
+  %h1 Recent News
+
+%section#bottom
+  %section.shell
+    %section#content.news-feed.two_third
+      .one_fourth
+        %img{:src => "/assets/bulldoglogo.png", :width => "100%"}/
+      .three_fourth.last
+        %h4.title= story.headline
+        .post-meta
+          Posted by
+          %strong
+            %a{:href => "#"}= story.author
+          = succeed "." do
+            %strong= story.publication_date.to_s(:pubtime)
+        %p= story.body
+        %p
+          / = link_to "Read More", story_url(story), :class => "continue"
+      .cl
+ 
+
+    %aside.one_third.last
+      %ul.widgets
+        %li.upcoming-widget
+          = render 'calendar/upcoming', :events => events

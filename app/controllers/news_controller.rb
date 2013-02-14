@@ -1,14 +1,18 @@
 class NewsController < ApplicationController
-  helper_method :news, :events
+  helper_method :story, :events, :news
 
   def show
+  end
+
+  def story
+    Story.find(params[:id])
   end
 
   def index
   end
 
   def news
-    Story.desc(:publish_time).limit(20)
+    Story.recent
   end
 
   def events

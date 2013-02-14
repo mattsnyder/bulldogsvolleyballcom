@@ -1,4 +1,4 @@
-%section.top-image{:style => "background:url('assets/volleyballssmaller.jpg') no-repeat top center;"}
+%section.top-image{:style => "background:url('/assets/volleyballssmaller.jpg') no-repeat top center;"}
   %h1 Recent News
 
 %section#bottom
@@ -9,7 +9,7 @@
           %img{:src => "/assets/bulldoglogo.png", :width => "100%"}/
         .three_fourth.last
           %h4.title
-            = link_to story.headline, "#"
+            = link_to story.headline, story_url(story)
           .post-meta
             Posted by
             %strong
@@ -17,9 +17,9 @@
             on
             = succeed "." do
               %strong= story.publication_date.to_s(:pubtime)
-          %p= story.body
+          %p= story.teaser
           %p
-            / = link_to "Read More", story_url(story), :class => "continue"
+            = link_to "Read More", story_url(story), :class => "continue"
         .cl
  
 
