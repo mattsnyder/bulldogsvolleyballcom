@@ -5,7 +5,10 @@
  * Last Updated:
  * December 08, 2012
  *
+ * 
+ * 
  */
+//= require mwsadmin/plugins/validate/jquery.validate-min
  
 (function($) {
 	$(document).ready(function() {	

@@ -5,10 +5,14 @@
  * Last Updated:
  * December 08, 2012
  *
+ *= require_self
+ *
+ *= require mwsadmin/form
+ *= require mwsadmin/button
+ *
  */
 
-@import url("form.css");
-@import url("button.css");
+
 
 /* Body
 ================================================== */

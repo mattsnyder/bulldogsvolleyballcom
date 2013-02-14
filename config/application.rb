@@ -63,7 +63,7 @@ module Bulldogsvolleyballcom
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    config.assets.precompile += ['administration.js', 'administration.css', 'mwsadmin/core/login.js', 'mwsadmin/manifest.css', 'mwsadmin/manifest.js']
+    config.assets.precompile += ['administration.js', 'administration.css', 'mwsadmin/core/login.js', 'mwsadmin/manifest.css', 'mwsadmin/manifest.js', 'mwsadmin/login.css', 'rails-jquery.js']
     config.assets.initialize_on_precompile = false
 
     # Version of your assets, change this if you want to expire all your assets
