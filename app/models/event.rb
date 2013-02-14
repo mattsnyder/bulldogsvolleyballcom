@@ -12,7 +12,7 @@ class Event
   field :details,           :type => String
 
   def date
-    "#{start_datetime.strftime("%b %d %I:%M%p")} - #{end_datetime.strftime("%I:%M%p")}"
+    "#{start_datetime.strftime("%a %b %d %I:%M%p")} - #{end_datetime.strftime("%I:%M%p")}"
   end
 
   def time
