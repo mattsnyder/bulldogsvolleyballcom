@@ -30,8 +30,8 @@ class Event
   def to_ics
     zone = ActiveSupport::TimeZone.new("Eastern Time (US & Canada)")
     event = Event.new
-    event.dtstart((start_datetime).strftime('%Y%m%dT%H%M%S'))
-    event.dtend((end_datetime).strftime('%Y%m%dT%H%M%S'))
+    event.dtstart((start_datetime.utc).strftime('%Y%m%dT%H%M%SZ'))
+    event.dtend((end_datetime.utc).strftime('%Y%m%dT%H%M%SZ'))
     event.summary = self.title
     event.location = self.location
     event.uid = self.id.to_s
