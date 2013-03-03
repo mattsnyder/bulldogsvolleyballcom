@@ -1,4 +1,4 @@
-/*!
+/*
  * jQuery UI CSS Framework 1.9.0
  * http://jqueryui.com
  *
@@ -7,18 +7,19 @@
  * http://jquery.org/license
  *
  * http://docs.jquery.com/UI/Theming
- */
-@import url("jquery.ui.core.css");
-
-@import url("jquery.ui.accordion.css");
-@import url("jquery.ui.autocomplete.css");
-@import url("jquery.ui.button.css");
-@import url("jquery.ui.datepicker.css");
-@import url("jquery.ui.dialog.css");
-@import url("jquery.ui.menu.css");
-@import url("jquery.ui.progressbar.css");
-@import url("jquery.ui.resizable.css");
-@import url("jquery.ui.selectable.css");
-@import url("jquery.ui.slider.css");
-@import url("jquery.ui.spinner.css");
-@import url("jquery.ui.tabs.css");
+ *
+ *= require_self
+ *= require mwsadmin/jui/jquery.ui.core
+ *= require mwsadmin/jui/jquery.ui.accordion
+ *= require mwsadmin/jui/jquery.ui.autocomplete
+ *= require mwsadmin/jui/jquery.ui.button
+ *= require mwsadmin/jui/jquery.ui.datepicker
+ *= require mwsadmin/jui/jquery.ui.dialog
+ *= require mwsadmin/jui/jquery.ui.menu
+ *= require mwsadmin/jui/jquery.ui.progressbar
+ *= require mwsadmin/jui/jquery.ui.resizable
+ *= require mwsadmin/jui/jquery.ui.selectable
+ *= require mwsadmin/jui/jquery.ui.slider
+ *= require mwsadmin/jui/jquery.ui.spinner
+ *= require mwsadmin/jui/jquery.ui.tabs
+*/
