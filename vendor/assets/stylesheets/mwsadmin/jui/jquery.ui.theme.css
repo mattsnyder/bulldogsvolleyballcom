@@ -30,7 +30,7 @@
 
 .ui-widget-content {
     /*border: 1px solid #aaaaaa;*/
-    /*background: #ffffff url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;*/
+    /*background: #ffffff url(/images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;*/
     /*color: #222222;*/
 }
 
@@ -40,7 +40,7 @@
 
 .ui-widget-header {
     /*border: 1px solid #aaaaaa;*/
-    /*background: #cccccc url(images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x;*/
+    /*background: #cccccc url(/images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x;*/
     /*color: #222222*/
     /*font-weight: bold;*/
 }
@@ -136,7 +136,7 @@
 .ui-icon {
     width: 16px;
     height: 16px;
-    background-image: url(../images/ui-icons.png);
+    background-image: url(/assets/mwsadmin/jui/ui-icons.png);
 }
 
 .ui-widget-content .ui-icon {}

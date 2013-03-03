@@ -17,7 +17,7 @@
  *= require mwsadmin/mws-style
  *= require mwsadmin/icons/icol16
  *= require mwsadmin/icons/icol32
- *= require mwsadmin/jui/css/jquery.ui.all
+ *= require mwsadmin/jui/jquery.ui.all
  *= require mwsadmin/jui/jquery-ui.custom
  *= require mwsadmin/login
  *= require mwsadmin/manifest

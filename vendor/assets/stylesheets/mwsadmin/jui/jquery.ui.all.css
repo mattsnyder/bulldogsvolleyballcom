@@ -11,8 +11,9 @@
  *= require_self
  *= require_tree .
  *
- *= require mwsadmin/jui/css/jquery.ui.base.css
- *= require mwsadmin/jui/css/jquery.ui.theme.css
+ *= require mwsadmin/jui/jquery.ui.base.css
+ *= require mwsadmin/jui/jquery.ui.theme.css
+ *= require mwsadmin/jui/jquery-ui.custom.css
  *
  */
 
