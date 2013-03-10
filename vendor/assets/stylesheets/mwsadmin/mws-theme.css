@@ -19,12 +19,12 @@ body,
 #mws-user-tools .mws-dropdown-menu .mws-dropdown-box, 
 #mws-user-tools .mws-dropdown-menu.open .mws-dropdown-trigger
 {
-	background-color:#35353a;
+	background-color:#4f1b1b;
 }
 
 #mws-header
 {
-	border-color:#c5d52b;
+	border-color:#e8cb10;
 }
 
 .mws-panel .mws-panel-header span, 
@@ -43,8 +43,8 @@ body,
 .ui-state-hover a, 
 .ui-state-focus a
 {
-	color:#c5d52b;
-	text-shadow:0 0 6px rgba(197, 213, 42, 0.48);
+	color:#f7ff00;
+	text-shadow:0 0 6px rgba(255, 255, 0, 0.6);
 }
 
 #mws-searchbox .mws-search-submit, 
@@ -65,5 +65,5 @@ body,
 .ui-accordion-header .ui-accordion-header-icon, 
 .ui-dialog-titlebar-close
 {
-	background-color:#c5d52b;
+	background-color:#e8cb10;
 }
