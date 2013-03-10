@@ -4,6 +4,7 @@ Bulldogsvolleyballcom::Application.routes.draw do
     resources :announcements
     resources :events
     resources :stories
+    resources :newspapers
   end
 
   devise_for :administrators, :path => "admin", :controllers => { :sessions => "admin/administrator_sessions" }

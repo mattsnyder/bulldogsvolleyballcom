@@ -30,7 +30,7 @@ Bulldogsvolleyballcom::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Do not compress assets
   config.assets.compress = false
