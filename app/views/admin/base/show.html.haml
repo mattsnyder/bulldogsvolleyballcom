@@ -1,8 +1,0 @@
-= link_to "Back to Index", collection_url
-= link_to "New #{controller.controller_name.titleize.singularize}", url_for(:controller => controller.controller_name, :action => 'new')
-%table{:class => "#{collection.first.class.to_s.downcase} detail"}
-  - resource.attributes.each_pair do |attr, value|
-    - next if ['id', '_id', 'created_at', 'updated_at', 'online_product_id'].include?(attr)
-    %tr
-      %th= attr.titleize
-      %td= resource.send(attr)
