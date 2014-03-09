@@ -1,0 +1,78 @@
+!!! 5
+%html{ :lang => "en"}
+  %head
+    %meta{ :charset => "utf-8" }
+    
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }
+
+    / Apple iOS Settings
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+    %link{:rel => "apple-touch-icon", :sizes => "114x114", :href => "/assets/apple-touch-icon-114x114.png"}
+    %link{:rel => "apple-touch-icon", :sizes => "72x72", :href => "/assets/apple-touch-icon-72x72.png"}
+    %link{:rel => "apple-touch-icon", :href => "/assets/apple-touch-icon.png"}
+
+    %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}    
+    %meta{:content => "default", :name => "apple-mobile-web-app-status-bar-style"}
+    %meta{:content => "width=device-width, minimum-scale=1, maximum-scale=1", :name => "viewport"}
+    %link{:href => "/assets/ios_icon.png", :rel => "apple-touch-icon-precomposed"}
+
+    %title= content_for?(:title) ? yield(:title) : "Stow Munroe Falls High School Boys Volleyball"
+
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "vendor/custom.modernizr"
+    = csrf_meta_tag
+
+  %body
+    .row
+      .large-12.columns
+        / Navigation
+        %nav.top-bar{"data-topbar" => ""}
+          %ul.title-area
+            / Title Area
+            %li.name
+              %h1
+                %a{href: "/"}
+                  SMFHS Boys Volleyball
+            %li.toggle-topbar.menu-icon
+              %a{href: "#"}
+                %span menu
+          %section.top-bar-section
+            %ul.left
+              %li
+                %a{href: "#"} Schedule
+              %li
+                %a{href: "#"} Super Scrimmage
+              %li
+                %a{href: "#"} Maroon & Gold Tournament
+            %ul.right
+              %li.search
+              %li.has-button
+
+        / End Navigation
+
+
+    = yield
+
+
+
+
+
+    / Footer
+    %footer.row
+      .large-12.columns
+        %hr/
+        .row
+          .large-6.columns
+            %p © Copyright no one at all. Go to town.
+          .large-6.columns
+            %ul.inline-list.right
+              %li
+                %a{href: "#"} Link 1
+              %li
+                %a{href: "#"} Link 2
+              %li
+                %a{href: "#"} Link 3
+              %li
+                %a{href: "#"} Link 4
+    
+    = javascript_include_tag "application"
