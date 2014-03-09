@@ -45,7 +45,9 @@
               %li
                 %a{href: "#"} Maroon & Gold Tournament
             %ul.right
-              %li.search
+              %li
+                = link_to "@bulldogsvball", "http://www.twitter.com/bulldogsvball"
+                
               %li.has-button
 
         / End Navigation
@@ -63,16 +65,15 @@
         %hr/
         .row
           .large-6.columns
-            %p © Copyright no one at all. Go to town.
+            %p © Stow Munroe Falls High School Boys Volleyball
           .large-6.columns
             %ul.inline-list.right
               %li
-                %a{href: "#"} Link 1
+                = link_to "OHSBVA", "http://www.ohioboysvolleyball.com"
               %li
-                %a{href: "#"} Link 2
+                = link_to "SMF School District", "http://www.smfschools.org"
               %li
-                %a{href: "#"} Link 3
-              %li
-                %a{href: "#"} Link 4
+                = link_to "SMF Boosters", "http://www.smfboosters.com"
+
     
     = javascript_include_tag "application"
