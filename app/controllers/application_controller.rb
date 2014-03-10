@@ -1,5 +1,23 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+  helper_method :hashtag
+
+  protected
+  # Nicely identify what is getting pushed to views
+  def self.expose(*variable_names)
+    variable_names.each do |variable_name|
+      define_method((variable_name.to_s+"=").to_sym) do |value|
+        @exposed ||= Hash.new
+        @exposed[variable_name]= value
+      end
+      private (variable_name.to_s+"=").to_sym
+
+      define_method(variable_name) do
+        @exposed ||= Hash.new
+        Maybe(@exposed[variable_name])
+      end
+
+      helper_method variable_name
+    end
+  end
 end

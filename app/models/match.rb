@@ -1,10 +1,10 @@
 class Match
   include Curator::Model
 
-  attr_accesor :opponent, :date, :time, :location, :result
+  attr_accessor :opponent, :date, :time, :location, :address, :result, :notes
 
   def initialize(args)
-    super(args.merge(id: "#{args[:date.to_i]-args[:opponent]}"))
+    super(args.merge(id: "#{args[:date].strftime("%Y%m%d%H%M%S")}-#{args[:opponent]}"))
   end
 
 end

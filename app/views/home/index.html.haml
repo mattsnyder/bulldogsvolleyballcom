@@ -8,9 +8,6 @@
           %li= image_tag "smfhsteam.jpg", alt: "stow bulldogs volleyball team"
           %li= image_tag "smfhsalumni.jpg", alt: "stow bulldogs volleyball alumni"
           %li= image_tag "smfhsreceiving.jpg", alt: "stow bulldogs volleyball team"
-        /
-          <img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image">
-          <img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image">
     / End Desktop Slider
     / Mobile Header
     .row
@@ -22,32 +19,21 @@
 .row#dates
   .large-12.columns
     .row
-      / Thumbnails
-      .large-3.small-6.columns
-        .date
-          .month March
-          .day 10
-          .dayname Monday
-        %h6.panel Practice 3pm - 5pm
-      .large-3.small-6.columns
-        .date
-          .month March
-          .day 11
-          .dayname Tuesday
-        %h6.panel Practice 3pm - 5pm
-      .large-3.small-6.columns
-        .date
-          .month March
-          .day 12
-          .dayname Wednesday
-        %h6.panel Practice 3pm - 5pm
-      .large-3.small-6.columns
-        .date
-          .month March
-          .day 13
-          .dayname Thursday
-        %h6.panel Practice 3pm - 5pm
-      / End Thumbnails
+      - next_matches.each do |match|
+        .large-3.small-6.columns
+          .title
+            = "Stow vs. #{match.opponent}"
+          .date
+            .dayname= match.date.strftime("%A")
+            .day= match.date.strftime("%-d")
+            .month= match.date.strftime("%B")
+          %h6.panel
+            = link_to match.location, "https://www.google.com/maps/search/#{CGI.escape(match.address)}", target: "_blank"
+            %br/
+            = match.address
+            %br/
+            = match.notes
+
 .row
   .large-12.columns
     .row
