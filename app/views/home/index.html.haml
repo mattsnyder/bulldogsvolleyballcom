@@ -13,7 +13,7 @@
     .row
       .small-12.show-for-small
         %br/
-        %img{src: "http://placehold.it/1000x600&text=For Small Screens"}/
+        / %img{src: "http://placehold.it/1000x600&text=For Small Screens"}/
     / End Mobile Header
 %br/
 .row#dates
@@ -28,14 +28,15 @@
               = "Stow vs. #{match.opponent}"
           .date
             .dayname= match.date.strftime("%A")
-            .day= match.date.strftime("%-d")
             .month= match.date.strftime("%B")
+            .day= match.date.strftime("%-d")
+            .time.maroon= "@ #{match.time}"
           %h6.panel
+            Where:
+            %br/
             = link_to match.location, "https://www.google.com/maps/search/#{CGI.escape(match.address)}", target: "_blank"
             %br/
-            = match.address
-            %br/
-            = match.notes
+            .address= match.address
 
 .row
   .large-12.columns
@@ -64,7 +65,5 @@
                 
       .large-4.columns.hide-for-small
         %a.large.button.expand{href: schedule_url} View the full schedule!
-        %h4 Get In Touch!
-        %hr/
         %a.large.button.expand{href: "http://ww.twitter.com/bulldogsvball"} Follow us on Twitter!
         %a.large.button.expand{href: "mailto:coach@bulldogsvolleyball.com"} Email Coach!

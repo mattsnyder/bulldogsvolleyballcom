@@ -1,3 +1,7 @@
 class ScheduleController < ApplicationController
-  def index; end
+  expose :matches
+
+  def index
+    self.matches = MatchRepository.all.sort{|x,y| x.date <=> y.date}
+  end
 end

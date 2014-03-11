@@ -1,47 +1,23 @@
 .row
   .large-12.columns
     .row
-      / Side Bar
-      .large-4.small-12.columns
-        = image_tag "bulldogvolleyballface.png"
-        .hide-for-small.panel
-          %h3 2014 Season
-          %h5.subheader
-            Games begin Friday March 21 with the District Tournament beginning May 9. All matches listed here are Varsity only.
-
-      / End Side Bar
-      / Thumbnails
-      .large-8.columns
-        .row
-          .large-4.small-6.columns
-            %img{src: "http://placehold.it/1000x1000&text=Thumbnail"}/
-            .panel
-              %h5 Item Name
-              %h6.subheader $000.00
-          .large-4.small-6.columns
-            %img{src: "http://placehold.it/500x500&text=Thumbnail"}/
-            .panel
-              %h5 Item Name
-              %h6.subheader $000.00
-          .large-4.small-6.columns
-            %img{src: "http://placehold.it/500x500&text=Thumbnail"}/
-            .panel
-              %h5 Item Name
-              %h6.subheader $000.00
-          .large-4.small-6.columns
-            %img{src: "http://placehold.it/500x500&text=Thumbnail"}/
-            .panel
-              %h5 Item Name
-              %h6.subheader $000.00
-          .large-4.small-6.columns
-            %img{src: "http://placehold.it/500x500&text=Thumbnail"}/
-            .panel
-              %h5 Item Name
-              %h6.subheader $000.00
-          .large-4.small-6.columns
-            %img{src: "http://placehold.it/500x500&text=Thumbnail"}/
-            .panel
-              %h5 Item Name
-              %h6.subheader $000.00
-        / End Thumbnails
-
+      .large-12.columns
+        .row#dates
+          - matches.each do |match|
+            .large-3.small-6.columns
+              .title
+                - if match.tournament
+                  = match.opponent
+                - else
+                  = "Stow vs. #{match.opponent}"
+              .date
+                .dayname= match.date.strftime("%A")
+                .month= match.date.strftime("%B")
+                .day= match.date.strftime("%-d")
+                .time= "@ #{match.time}"
+              %h6.panel
+                Where:
+                %br/
+                = link_to match.location, "https://www.google.com/maps/search/#{CGI.escape(match.address)}", target: "_blank"
+                %br/
+                .address= match.address
