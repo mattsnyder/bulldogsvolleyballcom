@@ -22,7 +22,10 @@
       - next_matches.each do |match|
         .large-3.small-6.columns
           .title
-            = "Stow vs. #{match.opponent}"
+            - if match.tournament
+              = match.opponent
+            - else
+              = "Stow vs. #{match.opponent}"
           .date
             .dayname= match.date.strftime("%A")
             .day= match.date.strftime("%-d")
@@ -47,6 +50,7 @@
               %h5.subheader
                 "The habits we form today will determine the results we achieve tomorrow"
               .show-for-small{align: "center"}
+                %a.small.radius.button{href: schedule_url} View the full Schedule!
                 %a.small.radius.button{href: "http://ww.twitter.com/bulldogsvball"} Follow us on Twitter!
                 %a.small.radius.button{href: "mailto:coach@bulldogsvolleyball.com"} Email Coach!
                 %br/
@@ -54,14 +58,14 @@
               %p
                 Our goal here at SMFHS is to
                 teach young men the sport of volleyball. That requires forming good habits that will lead
-                to future successes both on and off the court. And if we do these things right, we will hang banners 
-                on the wall.
+                to future successes both on and off the court. 
               %p 
-                Boys volleyball is a growing sport and if you or your son is interesting in learning more about it,
+                If you or your son is interested in learning more about Boys Volleyball in Ohio
                 contact Coach by email or on Twitter.
                 
                 
       .large-4.columns.hide-for-small
+        %a.large.button.expand{href: schedule_url} View the full schedule!
         %h4 Get In Touch!
         %hr/
         %a.large.button.expand{href: "http://ww.twitter.com/bulldogsvball"} Follow us on Twitter!
