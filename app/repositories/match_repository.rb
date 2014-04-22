@@ -18,7 +18,7 @@ class MatchRepository
      Match.new(opponent: "Hudson", date: Date.parse("2014/4/15"), time: "6:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224"),
      Match.new(opponent: "St. Eds", date: Date.parse("2014/4/17"), time: "6:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224"),
      Match.new(opponent: "Medina", date: Date.parse("2014/4/22"), time: "6:00pm", location: "Medina High School", address: "777 E Union St, Medina, Ohio 44256"),
-     Match.new(opponent: "Walsh", date: Date.parse("2014/4/24"), time: "6:00pm", location: "Walsh Jesuit High School", address: "4550 Wyoga Lake Rd, Cuyahoga Falls, OH 44224"),
+     Match.new(opponent: "Walsh", date: Date.parse("2014/4/24"), time: "5:30pm", location: "Walsh Jesuit High School", address: "4550 Wyoga Lake Rd, Cuyahoga Falls, OH 44224"),
      Match.new(opponent: "Maroon & Gold", date: Date.parse("2014/4/26"), time: "9:00am", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
      Match.new(opponent: "Medina", date: Date.parse("2014/4/28"), time: "6:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224"),
      Match.new(opponent: "North Royalton", date: Date.parse("2014/4/29"), time: "6:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224"),
