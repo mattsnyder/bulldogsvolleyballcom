@@ -4,6 +4,7 @@ Bulldogsvolleyballcom::Application.routes.draw do
   get 'schedule' => 'schedule#index', as: 'schedule'
   get 'events/super_scrimmage' => 'events#super_scrimmage', as: 'super_scrimmage'
   get 'events/maroon_and_gold' => 'events#maroon_and_gold', as: 'maroon_and_gold'
+  get 'events/mini_camp' => 'events#mini_camp', as: 'mini_camp'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

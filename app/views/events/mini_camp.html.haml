@@ -1,0 +1,43 @@
+.row
+  .large-9.push-3.columns
+    %h3.maroon
+      Bulldogs Mini Camp
+      %small May 22, 2014
+    %p
+      Join us for a fun, combined skills mini-camp, where athletes will get conditioned, learn about volleyball, and meet the high school team! Any player from ages 7 to 14 are welcome to attend. Have your athlete wear shorts and a t-shirt. It is important to keep hydrated in the heat, so please bring water. Lots and lots of water!
+    %p
+      %li Ages 7-10 5:00pm - 6:30pm
+      %li Ages 11-14 6:30pm - 8:00pm
+    %p
+      Stow Munroe Falls High School is located at:
+      %br
+      = link_to "3227 Graham Rd, Stow, OH 44224",  "https://www.google.com/maps/search/#{CGI.escape('3227 Graham Rd, Stow, OH 44224')}", target: "_blank"
+
+    %p
+      You can 
+      = link_to "register online now", "http://minicamp.bulldogsvolleyball.com"
+      or send a check for $10 made out to "Stow Boys Volleyball" with your registration form to: 
+    %p  
+      %address
+        .adr
+          .name Boys Volleyball
+          .attn attn: Coach Snyder
+          .street-address 3227 Graham Rd
+          .locality Stow, OH 
+          .postal-code 44224
+    
+    %p
+      = link_to "Download the Registration Form", "/2014BulldogsVolleyballMiniCamp.pdf", target: "_blank"
+
+  / Nav Sidebar
+  / This is source ordered to be pulled to the left on larger screens
+  .large-3.pull-9.columns
+    %p
+      %div{style: "width:195px; text-align:center;"}
+        %iframe{allowtransparency: "true", frameborder: "0", height: "493", marginheight: "0", marginwidth: "0", scrolling: "no", src: "https://www.eventbrite.com/countdown-widget?eid=11463392315", width: "195"}
+        %div{style: "font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:195px; text-align:center;"}
+          %a{href: "http://www.eventbrite.com/r/ecount", style: "color:#ddd; text-decoration:none;", target: "_blank"} Online event registration
+          %span{style: "color:#ddd;"} for
+          %a{href: "https://www.eventbrite.com/e/boys-volleyball-mini-camp-tickets-11463392315?ref=ecount", style: "color:#ddd; text-decoration:none;", target: "_blank"} Boys Volleyball Mini-Camp
+          %span{style: "color:#ddd;"} powered by
+          %a{href: "http://www.eventbrite.com?ref=ecount", style: "color:#ddd; text-decoration:none;", target: "_blank"} Eventbrite
