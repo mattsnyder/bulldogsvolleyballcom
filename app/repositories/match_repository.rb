@@ -29,8 +29,29 @@ class MatchRepository
      # Match.new(opponent: "Regional Playoff Semi-Final", tournament: true, date: Date.parse("2014/5/17"), time: "10:00am", location: "Archbishop Hoban", address: "1 Holy Cross Blvd, Akron, OH 44306"),
      # Match.new(opponent: "Youth Mini Camp", date: Date.parse("2014/5/22"), time: "5:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true )
 
-     Match.new(opponent: "Super Scrimmage", date: Date.parse("2015/3/21"), time: "9:00am", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
-     Match.new(opponent: "Maroon & Gold", date: Date.parse("2015/4/11"), time: "9:00am", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true )
+
+     Match.new(opponent: "Open Gym", date: Date.parse("2015/3/2"), time: "5:30pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
+     Match.new(opponent: "Tryouts (JV/V)", date: Date.parse("2015/3/9"), time: "6:30pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
+     Match.new(opponent: "Medina (V Scrimmage)", date: Date.parse("2015/3/17"), time: "6:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
+     Match.new(opponent: "Super Scrimmage (V)", date: Date.parse("2015/3/21"), time: "9:00am", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
+     Match.new(opponent: "Pickerington N. (V Quad)", date: Date.parse("2015/3/28"), time: "9:00am", location: "Pickerington North HS", address: "7800 Refugee Rd, Pickerington, OH 43147", tournament: true ),
+     Match.new(opponent: "Kent (JV/V)", date: Date.parse("2015/3/31"), time: "6:00pm", location: "Stanton Middle School", address: "1175 Hudson Rd, Kent, OH 44240"),
+     Match.new(opponent: "N. Royalton (JV/V)", date: Date.parse("2015/4/2"), time: "6:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224"),
+     Match.new(opponent: "Medina (JV/V)", date: Date.parse("2015/4/7"), time: "6:00pm", location: "Medina High School", address: "777 E Union St, Medina, Ohio 44256"),
+     Match.new(opponent: "Hudson (JV/V)", date: Date.parse("2015/4/9"), time: "6:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224"),
+     Match.new(opponent: "Maroon & Gold (V)", date: Date.parse("2015/4/11"), time: "9:00am", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
+     Match.new(opponent: "Jackson (JV/V)", date: Date.parse("2015/4/14"), time: "6:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224"),
+     Match.new(opponent: "St Vincent (JV/V)", date: Date.parse("2015/4/16"), time: "6:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224"),
+     Match.new(opponent: "Lake Cath. (JV/V)", date: Date.parse("2015/4/20"), time: "6:00pm", location: "Lake Catholic HS", address: "6733 Reynolds Rd, Mentor, OH 44060"),
+     Match.new(opponent: "Kent (JV/V)", date: Date.parse("2015/4/23"), time: "6:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224"),
+     Match.new(opponent: "Jackson Tournament (V)", date: Date.parse("2015/4/25"), time: "9:00am", location: "Jackson High School", address: "7600 Fulton Rd NW, Massillon, OH", tournament: true),
+     Match.new(opponent: "Hoban (JV/V)", date: Date.parse("2015/4/27"), time: "6:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224"),
+     Match.new(opponent: "Brecksville (JV/V)", date: Date.parse("2015/4/28"), time: "6:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224"),
+     Match.new(opponent: "Medina (JV/V)", date: Date.parse("2015/4/30"), time: "6:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224"),
+     Match.new(opponent: "v. Brunswick,Holy Name (V)", date: Date.parse("2015/5/2"), time: "10:00am", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true),
+     Match.new(opponent: "St Edwards (JV/V)", date: Date.parse("2015/5/5"), time: "6:00pm", location: "St Edwards High School", address: "13500 Detroit Ave, Lakewood, OH 44107"),
+     Match.new(opponent: "Hudson (JV/V)", date: Date.parse("2015/5/8"), time: "6:00pm", location: "Hudson High School", address: "2500 Hudson Aurora Rd, Hudson, OH 44236"),
+     Match.new(opponent: "Walsh (JV/V)", date: Date.parse("2015/5/12"), time: "6:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224")
     ]
   end
 end
