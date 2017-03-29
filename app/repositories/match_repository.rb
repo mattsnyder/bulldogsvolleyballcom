@@ -84,7 +84,6 @@ class MatchRepository
      Match.new(opponent: "Beavercreek (Tri)", date: Date.parse("2017/03/25"), time: "12:00PM", location: "Pickerington North HS", address: "7800 Refugee Rd, Pickerington, OH 43147", tournament: true ),
      Match.new(opponent: "Gahanna Lincoln (Tri)", date: Date.parse("2017/04/01"), time: "10:00AM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
      Match.new(opponent: "VASJ (Tri)", date: Date.parse("2017/04/01"), time: "1:00PM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
-     Match.new(opponent: "Brecksville", date: Date.parse("2017/4/04"), time: "7:00pm", location: "Brecksville High School", address: "6376 Mill Rd, Cleveland, OH 44147"),
      Match.new(opponent: "Kent", date: Date.parse("2017/04/6"), time: "7:00PM", location: "Stanton Middle School", address: "1175 Hudson Rd, Kent, OH 44240"),
      Match.new(opponent: "Polar Bear Bash", date: Date.parse("2017/04/08"), time: "8:00AM", location: "Jackson High School", address: "7600 Fulton Rd NW, Massillon, OH", tournament: true ),
      Match.new(opponent: "Medina", date: Date.parse("2017/04/11"), time: "7:00PM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: false ),
@@ -95,10 +94,10 @@ class MatchRepository
      Match.new(opponent: "St Edwards", date: Date.parse("2017/5/1"), time: "7:30pm", location: "St Edwards High School", address: "13500 Detroit Ave, Lakewood, OH 44107"),
      Match.new(opponent: "Medina", date: Date.parse("2017/05/03"), time: "7:00PM", location: "Medina High School", address: "777 E Union St, Medina, Ohio 44256"),
      Match.new(opponent: "Spike for Tykes", date: Date.parse("2017/05/05"), time: "2:00PM", location: "Greater Columbus COnvention Center", address: "Columbus, OH", tournament: true ),
-     Match.new(opponent: "Perry (V)", date: Date.parse("2017/04/09"), time: "6:00PM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: false ),
+     Match.new(opponent: "Perry (V)", date: Date.parse("2017/05/09"), time: "6:00PM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: false ),
      Match.new(opponent: "Hudson", date: Date.parse("2017/05/11"), time: "7:00PM", location: "Hudson High School", address: "2500 Hudson Aurora Rd, Hudson, OH 44236", tournament: false ),
      Match.new(opponent: "Brunswick", date: Date.parse("2017/05/12"), time: "7:00PM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: false ),
-     Match.new(opponent: "St Ignatius", date: Date.parse("2015/5/17"), time: "7:00pm", location: "St Ignatius High School", address: "")
+     Match.new(opponent: "St Ignatius", date: Date.parse("2017/5/17"), time: "7:00pm", location: "St Ignatius High School", address: "")
     ]
   end
 end
