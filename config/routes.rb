@@ -2,6 +2,7 @@ Bulldogsvolleyballcom::Application.routes.draw do
   root 'home#index'
 
   get 'schedule' => 'schedule#index', as: 'schedule'
+  get 'spring' => 'spring_league#index', as: 'spring_league'
   get 'events/super_scrimmage' => 'events#super_scrimmage', as: 'super_scrimmage'
   get 'events/maroon_and_gold' => 'events#maroon_and_gold', as: 'maroon_and_gold'
   get 'events/mini_camp' => 'events#mini_camp', as: 'mini_camp'
