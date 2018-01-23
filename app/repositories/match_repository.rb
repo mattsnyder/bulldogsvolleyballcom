@@ -118,7 +118,7 @@ class MatchRepository
      Match.new(opponent: "Walsh", date: Date.parse("2018/05/09"), time: "7:00PM", location: "Walsh Jesuit HS", address: "4550 Wyoga Lake Rd, Cuyahoga Falls, OH 44224", tournament: false ),
      Match.new(opponent: "Hudson", date: Date.parse("2018/5/11"), time: "7:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224"),
      Match.new(opponent: "Medina", date: Date.parse("2018/05/15"), time: "7:00PM", location: "Medina High School", address: "777 E Union St, Medina, Ohio 44256"),
-     Match.new(opponent: "Alumni Scrimmage", date: Date.parse("2018/5/15"), time: "6:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224")
+     Match.new(opponent: "Alumni Scrimmage", date: Date.parse("2018/5/18"), time: "6:00pm", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224")
     ]
   end
 end
