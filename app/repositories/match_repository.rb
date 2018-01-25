@@ -102,6 +102,7 @@ class MatchRepository
 
      Match.new(opponent: "Tryouts", date: Date.parse("2018/03/05"), time: "6:00PM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
      Match.new(opponent: "Super Scrimmage", date: Date.parse("2018/3/17"), time: "9:00AM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
+     Match.new(opponent: "Kent", date: Date.parse("2018/04/3"), time: "7:00PM", location: "Stanton Middle School", address: "1175 Hudson Rd, Kent, OH 44240"),
      Match.new(opponent: "Brunswick", date: Date.parse("2018/04/05"), time: "7:00PM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: false ),
      Match.new(opponent: "Pickerington North (Quad)", date: Date.parse("2018/04/07"), time: "10:00AM", location: "Pickerington North HS", address: "7800 Refugee Rd, Pickerington, OH 43147", tournament: true ),
      Match.new(opponent: "St. Ed's", date: Date.parse("2018/04/10"), time: "7:00PM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: false ),
