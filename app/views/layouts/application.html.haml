@@ -19,25 +19,20 @@
     %title= content_for?(:title) ? yield(:title) : "Stow Munroe Falls High School Boys Volleyball"
 
     = stylesheet_link_tag "application"
-    = javascript_include_tag "vendor/custom.modernizr"
+    = javascript_include_tag "application"
+    = javascript_include_tag :modernizr
     = csrf_meta_tag
 
   %body
     .row
       .large-12.columns
         / Navigation
-        %nav.top-bar{"data-topbar" => ""}
-          %ul.title-area
-            / Title Area
-            %li.name
-              %h1
-                %a{href: "/"}
-                  Stow Varsity Boys Volleyball
-            %li.toggle-topbar.menu-icon
-              %a{href: "#"}
-                %span menu
-          %section.top-bar-section
-            %ul.left
+        .top-bar
+          .top-bar-left
+            %ul.dropdown.menu{"data-dropdown-menu": ""}
+              %li
+                %b
+                  = link_to "Stow Varsity Boys Volleyball", root_url
               %li
                 = link_to "Schedule", schedule_url
               %li
@@ -48,15 +43,8 @@
                 = link_to "Spike for Tykes", "http://spikefortykes.org"
               %li
                 = link_to "Fall BIVL", "http://bivl.org/leagues"
-              / %li
-              /  = link_to "Maroon and Gold Tournament", maroon_and_gold_url
-            %ul.right
               %li
-                = link_to "@bulldogsvball", "http://www.twitter.com/bulldogsvball"
-
-              %li.has-button
-
-        / End Navigation
+                = link_to "@bulldogsvball", "http://www.twitter.com/stow_mvb"
 
     = yield
 

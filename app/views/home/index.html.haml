@@ -1,15 +1,31 @@
 .row
   .large-12.columns
-    / Desktop Slider
     .hide-for-small
-      #featured
-        %ul{"data-orbit" => ""}
-          %li= image_tag "2017-stow-vs-jackson-hawaii-night.jpg", alt: "2017 Stow vs Jackson Hawaii Night"
-          %li= image_tag "2017-sft-baer.jpg", alt: "2017 Spike for Tykes"
-          %li= image_tag "2017-polar-bear-lundstrum.jpg", alt: "2017 Polar Bear Bash"
-          %li= image_tag "2017-polar-bear-sibbel-freidt.jpg", alt: "2017 Polar Bear Bash"
-          %li= image_tag "2017-polar-bear-gray.jpg", alt: "2017 Polar Bear Bash"
-    / End Desktop Slider
+      .orbit{role: 'region', 'aria-label': "SMFHS Boys Volleyball Pictures", 'data-orbit': true}
+        .orbit-wrapper
+          %ul.orbit-container
+            %li.orbit-slide.is-active
+              %figure.orbit-figure
+                =image_tag "2017-stow-vs-jackson-hawaii-night.jpg", class: "orbit-image", alt: "2017 Stow vs Jackson Hawaii Night"
+            %li.orbit-slide
+              %figure.orbit-figure
+                = image_tag "2017-sft-baer.jpg", class: "orbit-image", alt: "2017 Spike for Tykes"
+            %li.orbit-slide
+              %figure.orbit-figure
+                = image_tag "2017-polar-bear-lundstrum.jpg", class: "orbit-image", alt: "2017 Polar Bear Bash"
+            %li.orbit-slide
+              %figure.orbit-figure
+                = image_tag "2017-polar-bear-sibbel-freidt.jpg", class: "orbit-image", alt: "2017 Polar Bear Bash"
+            %li.orbit-slide
+              %figure.orbit-figure
+                = image_tag "2017-polar-bear-gray.jpg", class: "orbit-image", alt: "2017 Polar Bear Bash"
+          %nav.orbit-bullets
+            %button.is-active{'data-slide': 0}
+            %button{'data-slide': 1}
+            %button{'data-slide': 2}
+            %button{'data-slide': 3}
+            %button{'data-slide': 4}
+    
     / Mobile Header
     .row
       .small-12.show-for-small
@@ -22,60 +38,51 @@
     .row
       - next_matches.each do |match|
         .large-3.small-6.columns
-          .title
-            - if match.tournament
-              = match.opponent
-            - else
-              = "Stow vs. #{match.opponent}"
-          .date
-            .dayname= match.date.strftime("%A")
-            .month= match.date.strftime("%B")
-            .day= match.date.strftime("%-d")
-            .time.maroon= "@ #{match.time}"
-          %h6.panel
-            Where:
-            %br/
-            = link_to match.location, "https://www.google.com/maps/search/#{CGI.escape(match.address)}", target: "_blank"
-            %br/
-            .address= match.address
+          .event
+            .title
+              - if match.tournament
+                = match.opponent
+              - else
+                = "Stow vs. #{match.opponent}"
+            .date
+              .dayname= match.date.strftime("%A")
+              .month= match.date.strftime("%B")
+              .day= match.date.strftime("%-d")
+              .time= "@ #{match.time}"
+            %h6.panel
+              = link_to match.location, "https://www.google.com/maps/search/#{CGI.escape(match.address)}", target: "_blank"
+              %br/
+              .address= match.address
 
 .row
   .large-12.columns
     .row
       / Content
       .large-8.columns
-        .panel.radius
+        .panel.radius.callout
           .row
             .large-6.small-6.columns
-              %h4 2018 Open Gyms
+              %h4 2019 Open Gyms
               %hr/
               %h5.subheader
                 "The opportunity to play high school volleyball changed the path of my life. It led to a college scholarship, and the ability to get a degree from a great university."
                 %br
                 %i - Ben Spurlock '04
-              .show-for-small{align: "center"}
-                %a.small.radius.button{href: schedule_url} View the full Schedule!
-                %a.small.radius.button{href: "http://ww.twitter.com/bulldogsvball"} Follow us on Twitter!
-                %a.small.radius.button{href: "mailto:coach@bulldogsvolleyball.com"} Email Coach!
-                %br/
             .large-6.small-6.columns
               %ul
-                %li Wed, Jan 24 8-9:30pm
-                %li Mon, Feb 5 8-9:30pm
-                %li Mon, Feb 12 8-9:30pm
-                %li Thur, Feb 15 8-9:30pm
-                %li Wed, Feb 21 7-9pm
-                %li Sat, Feb 24 6-8pm
-                %li Mon, Feb 26 7-9pm
-                %li Tue, Feb 27 7-9pm
-                %li Thur, Mar 1 7-9pm
-                %li Sat, Mar 3 5-7pm
-              %p Tryouts are March 5
-
-
-
+                %li Feb 2, 7:00 - 8:30 PM
+                %li Feb 12, 7:00 - 8:30 PM
+                %li Feb 14, 7:00 - 8:30 PM
+                %li Feb 19, 5:00 - 6:30 PM
+                %li Feb 21, 7:30 - 8:30 PM
+                %li Feb 23, 2:30 - 4:00 PM
+                %li Feb 25, 6:00 - 7:30 PM
+                %li Feb 26, 6:00 - 7:30 PM
+                %li Mar 2, 10:00AM - 11:30 AM
+              %p
+                %b Tryouts are March 5 @ 5:30 PM
 
       .large-4.columns.hide-for-small
         %a.large.button.expand{href: schedule_url} View the full schedule!
-        %a.large.button.expand{href: "http://ww.twitter.com/bulldogsvball"} Follow us on Twitter!
+        %a.large.button.expand{href: "http://ww.twitter.com/stow_mvb"} Follow us on Twitter!
         %a.large.button.expand{href: "mailto:coach@bulldogsvolleyball.com"} Email Coach!
