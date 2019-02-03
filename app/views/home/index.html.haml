@@ -1,6 +1,6 @@
 .row
   .large-12.columns
-    .hide-for-small
+    .show-for-medium
       .orbit{role: 'region', 'aria-label': "SMFHS Boys Volleyball Pictures", 'data-orbit': true}
         .orbit-wrapper
           %ul.orbit-container
@@ -25,14 +25,7 @@
             %button{'data-slide': 2}
             %button{'data-slide': 3}
             %button{'data-slide': 4}
-    
-    / Mobile Header
-    .row
-      .small-12.show-for-small
-        %br/
-        / %img{src: "http://placehold.it/1000x600&text=For Small Screens"}/
-    / End Mobile Header
-%br/
+
 .row#dates
   .large-12.columns
     .row
@@ -55,34 +48,67 @@
               .address= match.address
 
 .row
-  .large-12.columns
-    .row
-      / Content
-      .large-8.columns
-        .panel.radius.callout
+  .hide-for-large
+    .large-12.columns
+      .row
+        .large-8.columns
           .row
-            .large-6.small-6.columns
-              %h4 2019 Open Gyms
-              %hr/
-              %h5.subheader
-                "The opportunity to play high school volleyball changed the path of my life. It led to a college scholarship, and the ability to get a degree from a great university."
+            .large-4.columns
+              .callout.large
+                %h5 2019 Open Gyms
+                %ul
+                  %li Feb 2, 7:00 - 8:30 PM
+                  %li Feb 12, 7:00 - 8:30 PM
+                  %li Feb 14, 7:00 - 8:30 PM
+                  %li Feb 19, 5:00 - 6:30 PM
+                  %li Feb 21, 7:30 - 8:30 PM
+                  %li Feb 23, 2:30 - 4:00 PM
+                  %li Feb 25, 6:00 - 7:30 PM
+                  %li Feb 26, 6:00 - 7:30 PM
+                  %li Mar 2, 10:00AM - 11:30 AM
+                %p
+                  %b Tryouts are March 5 @ 5:30 PM
+            .large-4.columns.show-for-medium
+              .callout.large
+                %h5.subheader
+                  "The opportunity to play high school volleyball changed the path of my life. It led to a college scholarship, and the ability to get a degree from a great university."
                 %br
                 %i - Ben Spurlock '04
-            .large-6.small-6.columns
-              %ul
-                %li Feb 2, 7:00 - 8:30 PM
-                %li Feb 12, 7:00 - 8:30 PM
-                %li Feb 14, 7:00 - 8:30 PM
-                %li Feb 19, 5:00 - 6:30 PM
-                %li Feb 21, 7:30 - 8:30 PM
-                %li Feb 23, 2:30 - 4:00 PM
-                %li Feb 25, 6:00 - 7:30 PM
-                %li Feb 26, 6:00 - 7:30 PM
-                %li Mar 2, 10:00AM - 11:30 AM
-              %p
-                %b Tryouts are March 5 @ 5:30 PM
+      .row
+        .large-8.columns
+          %a.large.button.expand{href: schedule_url} View the full schedule! 
+          %a.large.button.expand{href: "http://ww.twitter.com/stow_mvb"} Follow us on Twitter!
+          %a.large.button.expand{href: "mailto:coach@bulldogsvolleyball.com"} Email Coach!
 
-      .large-4.columns.hide-for-small
-        %a.large.button.expand{href: schedule_url} View the full schedule!
-        %a.large.button.expand{href: "http://ww.twitter.com/stow_mvb"} Follow us on Twitter!
-        %a.large.button.expand{href: "mailto:coach@bulldogsvolleyball.com"} Email Coach!
+  .show-for-large
+    .large-12.columns
+      .row
+        / Content
+        .large-8.columns
+          .panel.radius.callout
+            .row
+              .large-6.small-6.columns
+                %h4 2019 Open Gyms
+                %hr/
+                %h5.subheader
+                  "The opportunity to play high school volleyball changed the path of my life. It led to a college scholarship, and the ability to get a degree from a great university."
+                  %br
+                  %i - Ben Spurlock '04
+              .large-6.small-6.columns
+                %ul
+                  %li Feb 2, 7:00 - 8:30 PM
+                  %li Feb 12, 7:00 - 8:30 PM
+                  %li Feb 14, 7:00 - 8:30 PM
+                  %li Feb 19, 5:00 - 6:30 PM
+                  %li Feb 21, 7:30 - 8:30 PM
+                  %li Feb 23, 2:30 - 4:00 PM
+                  %li Feb 25, 6:00 - 7:30 PM
+                  %li Feb 26, 6:00 - 7:30 PM
+                  %li Mar 2, 10:00AM - 11:30 AM
+                %p
+                  %b Tryouts are March 5 @ 5:30 PM
+
+        .large-4.columns        
+          %a.large.button.expand{href: schedule_url} View the full schedule!
+          %a.large.button.expand{href: "http://ww.twitter.com/stow_mvb"} Follow us on Twitter!
+          %a.large.button.expand{href: "mailto:coach@bulldogsvolleyball.com"} Email Coach!

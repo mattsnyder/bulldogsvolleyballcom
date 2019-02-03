@@ -5,19 +5,18 @@
         .row#dates
           - matches.each do |match|
             .large-3.small-6.columns
-              .title
-                - if match.tournament
-                  = match.opponent
-                - else
-                  = "Stow vs. #{match.opponent}"
-              .date
-                .dayname= match.date.strftime("%A")
-                .month= match.date.strftime("%B")
-                .day= match.date.strftime("%-d")
-                .time= "@ #{match.time}"
-              %h6.panel
-                Where:
-                %br/
-                = link_to match.location, "https://www.google.com/maps/search/#{CGI.escape(match.address)}", target: "_blank"
-                %br/
-                .address= match.address
+              .event
+                .title
+                  - if match.tournament
+                    = match.opponent
+                  - else
+                    = "Stow vs. #{match.opponent}"
+                .date
+                  .dayname= match.date.strftime("%A")
+                  .month= match.date.strftime("%B")
+                  .day= match.date.strftime("%-d")
+                  .time= "@ #{match.time}"
+                %h6.panel
+                  = link_to match.location, "https://www.google.com/maps/search/#{CGI.escape(match.address)}", target: "_blank"
+                  %br/
+                  .address= match.address
