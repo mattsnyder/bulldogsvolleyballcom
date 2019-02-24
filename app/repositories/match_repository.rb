@@ -105,7 +105,7 @@ class MatchRepository
      Match.new(opponent: "Open Gym", date: Date.parse("2019/02/21"), time: "7:30PM - 8:30PM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
      Match.new(opponent: "Open Gym", date: Date.parse("2019/02/23"), time: "2:30PM - 4:30PM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
      Match.new(opponent: "Open Gym", date: Date.parse("2019/02/25"), time: "6:00PM - 7:30PM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
-     Match.new(opponent: "Open Gym", date: Date.parse("2019/02/26"), time: "6:00PM - 7:30PM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
+     Match.new(opponent: "Open Gym", date: Date.parse("2019/02/27"), time: "6:00PM - 7:30PM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
      Match.new(opponent: "Open Gym", date: Date.parse("2019/03/02"), time: "10:00AM - 12:00PM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
      Match.new(opponent: "Tryouts", date: Date.parse("2019/03/04"), time: "5:30PM - 7:30PM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
      Match.new(opponent: "Super Scrimmage", date: Date.parse("2019/3/16"), time: "9:00AM", location: "Stow High School", address: "3227 Graham Rd, Stow, OH 44224", tournament: true ),
